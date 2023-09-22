@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/coordinatorpl"
+    android:background="@drawable/background_pagecolor"
+    android:layout_height="match_parent"
+    tools:context=".Shopping.PurchasedListFramgmentframe">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:overScrollMode="always"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_toolbar_tablayout"
+                        android:orientation="horizontal">
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="#"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textAlignment="center" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:text="Order No."
+                            android:textAlignment="center" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="Order Date."
+                            android:textAlignment="center" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="INV No."
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textAlignment="center" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="INV Date"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textAlignment="center" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="Total Amount"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textAlignment="center" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="Qty."
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textAlignment="center" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="BV"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textAlignment="center" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite" />
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="PV"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:textAlignment="center" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite" />
+
+
+                        <TextView
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:textColor="@color/colorWhite"
+                            android:text="Status"
+                            android:textAlignment="center" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerview_purchasedlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

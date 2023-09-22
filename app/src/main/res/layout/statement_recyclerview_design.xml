@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="5dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="5dp"
+    android:layout_marginBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TableLayout
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="#ffff"
+            android:stretchColumns="*"
+            android:collapseColumns="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="0dp">
+
+                <TextView
+                    android:id="@+id/Remark"
+                    android:layout_width="202dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:layout_marginLeft="10dp"
+                    android:text="mnvb,sdvbfzd"
+                    android:textStyle="normal"
+                    android:textSize="13sp"
+                    />
+
+                <TextView
+                    android:id="@+id/Amount"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:textSize="13sp"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:text="dncfjd,dsnvhb" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="ssfhmgrsjd" />
+            </TableRow>
+
+        </TableLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

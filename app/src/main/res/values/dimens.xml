@@ -1,0 +1,56 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="cardCornerRadius"> 5dp </dimen>
+    <dimen name="cardElevation"> 5dp </dimen>
+    <dimen name="cardPreventCornerOverlap">5dp</dimen>
+    <dimen name="cardUseCompatPadding">5dp</dimen>
+
+    <dimen name="dimen_3dp">3dp</dimen>
+
+    <dimen name="top_bottom_padding_login_fields">12dp</dimen>
+    <dimen name="common_text_size_login">20dp</dimen>
+    <dimen name="dashboard_card_text">20sp</dimen>
+    <dimen name="dashboard_tab_text">14sp</dimen>
+    <dimen name="dashboard_tab_tb_padding">8dp</dimen>
+    <dimen name="dashboard_bottom_tab_tb_padding">10dp</dimen>
+    <dimen name="dashboard_bottom_tab_text_tb_padding">2dp</dimen>
+    <dimen name="dashboard_rv_start_end_padding">20dp</dimen>
+    <dimen name="ic_paadding_top">15dp</dimen>
+    <dimen name="ic_button_gap_padding">30dp</dimen>
+    <dimen name="ic_layout_start_margin">6dp</dimen>
+    <dimen name="cb_tv_padding_top">4dp</dimen>
+    <dimen name="cb_tv_padding_bottom">2dp</dimen>
+    <dimen name="cb_tv_padding_start_end">3dp</dimen>
+    <dimen name="cb_tv_padding_margin_end">4dp</dimen>
+    <dimen name="cb_tv_padding_margin_start">25dp</dimen>
+    <dimen name="cb_layout_start_margin">15dp</dimen>
+    <dimen name="cb_cv_line_gap">3dp</dimen>
+    <dimen name="cb_page_text_size">12sp</dimen>
+    <dimen name="left_tv_weight">2.2</dimen>
+    <dimen name="mid_tv_weight">.2</dimen>
+    <dimen name="right_tv_weight">10</dimen>
+    <dimen name="cv_below_left_tv_weight">3</dimen>
+    <dimen name="cv_below_mid_tv_weight">1</dimen>
+    <dimen name="cv_below_right_tv_weight">3</dimen>
+    <dimen name="cv_layout_gap_padding">6dp</dimen>
+    <dimen name="id_ri_text_size">12sp</dimen>
+    <dimen name="submit_button_width">120dp</dimen>
+    <dimen name="submit_button_height">34dp</dimen>
+    <dimen name="kyc_image_width">150dp</dimen>
+    <dimen name="kyc_image_height">100dp</dimen>
+    <dimen name="rounded_corner_radius">20dp</dimen>
+
+
+
+    <dimen name="upload_details_lay_tb_padding">10dp</dimen>
+    <dimen name="upload_details_se_margin">10dp</dimen>
+    <dimen name="change_pass_start_padding">20dp</dimen>
+    <dimen name="change_pass_end_padding">15dp</dimen>
+
+</resources>

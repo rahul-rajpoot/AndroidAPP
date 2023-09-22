@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:elevation="15dp"
+    app:cardMaxElevation="15dp"
+    android:id="@+id/tdspage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="0.1dp"
+            android:background="@android:color/white"
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:layout_height="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="#111"
+                android:id="@+id/payidtds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="cut of month"
+                android:paddingTop="8dp"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="0.1dp"
+            android:layout_marginRight="0.1dp"
+            android:layout_weight="1.1"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/totalamounttds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:paddingTop="8dp"
+                android:paddingRight="6dp"
+                android:textColor="#111"
+                android:text="total income"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="0.1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:layout_weight="0.8">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:textAlignment="textEnd"
+                android:paddingRight="6dp"
+                android:paddingTop="8dp"
+                android:layout_height="wrap_content"
+                android:text="Tdsrate"
+                android:textColor="#111"
+                android:id="@+id/tdsrateree"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="0.1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:textAlignment="textEnd"
+                android:textColor="#111"
+                android:paddingTop="8dp"
+                android:layout_height="wrap_content"
+                android:text="Tds Amount"
+                android:id="@+id/tdsamtree"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

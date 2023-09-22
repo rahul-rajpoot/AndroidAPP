@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/yellow_bg"
+    android:id="@+id/billingDetailsRoot">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+<!--            <GridView-->
+<!--                android:id="@+id/cart_list"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="20dp"-->
+<!--                android:gravity="center"-->
+<!--                android:horizontalSpacing="10dp"-->
+<!--                android:numColumns="1"-->
+<!--                android:stretchMode="columnWidth"-->
+<!--                android:verticalSpacing="20dp"></GridView>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cart_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/rounded_corner_white_box_layout"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:orientation="horizontal"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|left"
+                                android:gravity="center|left"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|left"
+                                    android:gravity="center|left"
+                                    android:text="Sub Total Amount"
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16sp"
+                                    ></TextView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text=" : "
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16sp"
+                                    ></TextView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/subTotalAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center|left"
+                                android:text=""
+                                android:textColor="@color/colorblack"
+                                android:textSize="16dp"></TextView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:orientation="horizontal"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:gravity="center|left"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|left"
+                                    android:gravity="center|left"
+                                    android:text="Discount (0.00%)"
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16sp"
+                                    ></TextView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text=" : "
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16sp"
+                                    ></TextView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/discount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center|left"
+                                android:text=""
+                                android:textColor="@color/colorblack"
+                                android:textSize="16dp"></TextView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:orientation="horizontal"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:gravity="center|left"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|left"
+                                    android:gravity="center|left"
+                                    android:text="Total Amount"
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16sp"
+                                    ></TextView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text=" : "
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16sp"
+                                    ></TextView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/totalAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center|left"
+                                android:text=""
+                                android:textColor="@color/colorblack"
+                                android:textSize="16dp"></TextView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        >-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_weight=".4"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            >-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_gravity="center|left"-->
+<!--                                android:gravity="center|left"-->
+<!--                                android:orientation="vertical">-->
+
+<!--                                <TextView-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:layout_gravity="center|left"-->
+<!--                                    android:gravity="center|left"-->
+<!--                                    android:text="Total Weight"-->
+<!--                                    android:textColor="@color/colorblack"-->
+<!--                                    android:textSize="16sp"-->
+<!--                                    ></TextView>-->
+
+<!--                            </LinearLayout>-->
+
+<!--                        </LinearLayout>-->
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_weight=".1"-->
+<!--                            >-->
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:gravity="center"-->
+<!--                                android:orientation="vertical">-->
+
+<!--                                <TextView-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_gravity="center"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:text=" : "-->
+<!--                                    android:textColor="@color/colorblack"-->
+<!--                                    android:textSize="16sp"-->
+<!--                                    ></TextView>-->
+
+<!--                            </LinearLayout>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_weight=".4"-->
+<!--                            android:orientation="vertical"-->
+<!--                            >-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/totalWeight"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:layout_gravity="center|left"-->
+<!--                                android:fontFamily="@font/poppins_regular"-->
+<!--                                android:gravity="center|left"-->
+<!--                                android:text=""-->
+<!--                                android:textColor="@color/colorblack"-->
+<!--                                android:textSize="16dp"></TextView>-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:orientation="horizontal"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:gravity="center|left"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|left"
+                                    android:gravity="center|left"
+                                    android:text="Grand Total"
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16sp"
+                                    ></TextView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text=" : "
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="16sp"
+                                    ></TextView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".4"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/grandTotal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center|left"
+                                android:text=""
+                                android:textColor="@color/colorblack"
+                                android:textSize="16dp"></TextView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight=".5"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/shopMore"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:text="@string/shop_mpre"
+                                android:textColor="@color/colorwhite"
+                                android:layout_marginLeft="15dp"
+                                android:background="@drawable/rounded_corner_yellow_button"
+                                android:textSize="16dp"
+                                android:layout_marginRight="15dp">
+
+                            </TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_gravity="center"
+                                android:layout_weight=".5"
+                                android:gravity="center"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/checkout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Checkout"
+                                    android:textColor="@color/colorwhite"
+                                    android:layout_marginLeft="15dp"
+                                    android:background="@drawable/rounded_corner_red_button"
+                                    android:textSize="16dp"
+                                    android:layout_marginRight="15dp">
+
+                                </TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="38dp"-->
+<!--                        android:layout_marginTop="20dp"-->
+<!--                        android:gravity="center"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:orientation="horizontal">-->
+
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_gravity="center"-->
+<!--                                android:gravity="center"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:orientation="horizontal">-->
+<!--                                <TextView-->
+<!--                                    android:id="@+id/checkout"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:layout_gravity="center"-->
+<!--                                    android:fontFamily="@font/poppins_regular"-->
+<!--                                    android:gravity="center"-->
+<!--                                    android:text="@string/checkout"-->
+<!--                                    android:textColor="@color/colorwhite"-->
+<!--                                    android:layout_marginLeft="90dp"-->
+<!--                                    android:background="@drawable/rounded_corner_red_button"-->
+<!--                                    android:textSize="16dp"-->
+<!--                                    android:layout_marginRight="90dp">-->
+
+<!--                                </TextView>-->
+<!--                        </LinearLayout>-->
+<!--                    </LinearLayout>-->
+
+
+
+                </LinearLayout>
+        </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/addAddressRoot"
+                android:visibility="gone"
+                tools:context=".fragments.shopnow.ShopNowFragment">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    app:cardBackgroundColor="#F1EEEE"
+                    app:cardElevation="20dp"
+                    app:contentPadding="1dp">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorwhite"
+                            android:orientation="vertical"
+                            android:paddingStart="10dp"
+                            android:paddingTop="15dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight=".55"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center|left"
+                                    android:text="Deliver to"
+                                    android:textColor="@color/colorblack"
+                                    android:textSize="17dp">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|right"
+                                    android:layout_weight=".45"
+                                    android:gravity="center|right"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|right"
+                                        android:gravity="center|right"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight=".15"
+                                            android:orientation="horizontal">
+
+                                            <ViewFlipper
+                                                android:id="@+id/simpleViewFlipper"
+                                                android:layout_width="20dp"
+                                                android:layout_height="20dp"
+                                                android:layout_gravity="center|right"
+                                                android:gravity="center|right"
+                                                >
+
+                                                <ImageView
+                                                    android:id="@+id/checkedButton"
+                                                    android:layout_width="20dp"
+                                                    android:layout_height="20dp"
+                                                    android:src="@drawable/check_box">
+
+                                                </ImageView>
+
+                                                <ImageView
+                                                    android:id="@+id/unCheckedButton"
+                                                    android:layout_width="20dp"
+                                                    android:layout_height="20dp"
+                                                    android:src="@drawable/uncheked_box">
+
+                                                </ImageView>
+
+                                            </ViewFlipper>
+
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center|right"
+                                            android:layout_weight=".85"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center|right"
+                                            android:text="Default Address"
+                                            android:textColor="@color/colorblack"
+                                            android:textSize="16dp">
+
+                                        </TextView>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/mobileNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|left"
+                                    android:background="@drawable/rectangle_yellow_box_layout"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center|left"
+                                    android:hint="@string/enter_mobile_no"
+                                    android:paddingLeft="10dp"
+                                    android:maxLength="10"
+                                    android:inputType="number"
+                                    android:singleLine="true"
+                                    android:textColor="@color/colorblack"
+                                    android:textColorHint="@color/colorblack"
+                                    android:textSize="17dp">
+
+                                </EditText>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|left"
+                                    android:background="@drawable/rectangle_yellow_box_layout"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center|left"
+                                    android:hint="@string/enter_email"
+                                    android:paddingLeft="10dp"
+                                    android:textColor="@color/colorblack"
+                                    android:textColorHint="@color/colorblack"
+                                    android:singleLine="true"
+                                    android:textSize="17dp">
+
+                                </EditText>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/stateLL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rectangle_yellow_box_layout"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <Spinner
+                                            android:id="@+id/state_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="46dp"
+                                            android:visibility="visible"
+                                            />
+
+                                        <!--                    <View-->
+                                        <!--                        android:layout_width="match_parent"-->
+                                        <!--                        android:layout_height="1dp"-->
+                                        <!--                        android:layout_marginTop="-3dp"-->
+                                        <!--                        android:layout_marginBottom="10dp"-->
+                                        <!--                        android:layout_gravity="center"-->
+                                        <!--                        android:background="@color/gray"></View>-->
+
+                                        <!--                        <LinearLayout-->
+                                        <!--                            android:id="@+id/selectState"-->
+                                        <!--                            android:layout_width="match_parent"-->
+                                        <!--                            android:layout_height="match_parent"-->
+                                        <!--                            android:orientation="horizontal">-->
+
+                                        <!--                            <LinearLayout-->
+                                        <!--                                android:layout_width="0dp"-->
+                                        <!--                                android:layout_height="match_parent"-->
+                                        <!--                                android:layout_weight=".86"-->
+                                        <!--                                android:orientation="horizontal">-->
+
+                                        <!--                                <TextView-->
+                                        <!--                                    android:id="@+id/selectStateTV"-->
+                                        <!--                                    android:layout_width="match_parent"-->
+                                        <!--                                    android:layout_height="match_parent"-->
+                                        <!--                                    android:text="Select State"-->
+                                        <!--                                    android:fontFamily="@font/poppins_regular"-->
+                                        <!--                                    android:gravity="center|left"-->
+                                        <!--                                    android:paddingLeft="10dp"-->
+                                        <!--                                    android:textColor="@color/colorblack"-->
+                                        <!--                                    android:textColorHint="@color/colorblack"-->
+                                        <!--                                    android:textSize="17dp"-->
+                                        <!--                                    >-->
+                                        <!--                                </TextView>-->
+
+                                        <!--                            </LinearLayout>-->
+
+                                        <!--                            <LinearLayout-->
+                                        <!--                                android:layout_width="0dp"-->
+                                        <!--                                android:layout_height="match_parent"-->
+                                        <!--                                android:layout_weight=".14"-->
+                                        <!--                                android:layout_gravity="center"-->
+                                        <!--                                android:gravity="center"-->
+                                        <!--                                android:orientation="horizontal">-->
+
+                                        <!--&lt;!&ndash;                                <ImageView&ndash;&gt;-->
+                                        <!--&lt;!&ndash;                                    android:layout_width="15dp"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;                                    android:layout_height="15dp"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;                                    android:src="@drawable/caret"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;                                    >&ndash;&gt;-->
+
+
+                                        <!--&lt;!&ndash;                                </ImageView>&ndash;&gt;-->
+
+                                        <!--                            </LinearLayout>-->
+
+
+                                        <!--                        </LinearLayout>-->
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                                <!--                <EditText-->
+                                <!--                    android:layout_width="0dp"-->
+                                <!--                    android:layout_height="match_parent"-->
+                                <!--                    android:layout_gravity="center|left"-->
+                                <!--                    android:layout_weight=".5"-->
+                                <!--                    android:background="@drawable/rectangle_yellow_box_layout"-->
+                                <!--                    android:fontFamily="@font/poppins_regular"-->
+                                <!--                    android:gravity="center|left"-->
+                                <!--                    android:paddingLeft="10dp"-->
+                                <!--                    android:hint="@string/select_state"-->
+                                <!--                    android:textColorHint="@color/colorblack"-->
+                                <!--                    android:textColor="@color/colorblack"-->
+                                <!--                    android:textSize="17dp">-->
+
+                                <!--                </EditText>-->
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/districtLL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rectangle_yellow_box_layout"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <Spinner
+                                            android:id="@+id/district_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="46dp"
+                                            android:visibility="visible"
+                                            />
+
+                                        <!--                    <View-->
+                                        <!--                        android:layout_width="match_parent"-->
+                                        <!--                        android:layout_height="1dp"-->
+                                        <!--                        android:layout_marginTop="-3dp"-->
+                                        <!--                        android:layout_marginBottom="10dp"-->
+                                        <!--                        android:layout_gravity="center"-->
+                                        <!--                        android:background="@color/gray"></View>-->
+
+                                        <!--                        <LinearLayout-->
+                                        <!--                            android:id="@+id/selectState"-->
+                                        <!--                            android:layout_width="match_parent"-->
+                                        <!--                            android:layout_height="match_parent"-->
+                                        <!--                            android:orientation="horizontal">-->
+
+                                        <!--                            <LinearLayout-->
+                                        <!--                                android:layout_width="0dp"-->
+                                        <!--                                android:layout_height="match_parent"-->
+                                        <!--                                android:layout_weight=".86"-->
+                                        <!--                                android:orientation="horizontal">-->
+
+                                        <!--                                <TextView-->
+                                        <!--                                    android:id="@+id/selectStateTV"-->
+                                        <!--                                    android:layout_width="match_parent"-->
+                                        <!--                                    android:layout_height="match_parent"-->
+                                        <!--                                    android:text="Select State"-->
+                                        <!--                                    android:fontFamily="@font/poppins_regular"-->
+                                        <!--                                    android:gravity="center|left"-->
+                                        <!--                                    android:paddingLeft="10dp"-->
+                                        <!--                                    android:textColor="@color/colorblack"-->
+                                        <!--                                    android:textColorHint="@color/colorblack"-->
+                                        <!--                                    android:textSize="17dp"-->
+                                        <!--                                    >-->
+                                        <!--                                </TextView>-->
+
+                                        <!--                            </LinearLayout>-->
+
+                                        <!--                            <LinearLayout-->
+                                        <!--                                android:layout_width="0dp"-->
+                                        <!--                                android:layout_height="match_parent"-->
+                                        <!--                                android:layout_weight=".14"-->
+                                        <!--                                android:layout_gravity="center"-->
+                                        <!--                                android:gravity="center"-->
+                                        <!--                                android:orientation="horizontal">-->
+
+                                        <!--&lt;!&ndash;                                <ImageView&ndash;&gt;-->
+                                        <!--&lt;!&ndash;                                    android:layout_width="15dp"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;                                    android:layout_height="15dp"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;                                    android:src="@drawable/caret"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;                                    >&ndash;&gt;-->
+
+
+                                        <!--&lt;!&ndash;                                </ImageView>&ndash;&gt;-->
+
+                                        <!--                            </LinearLayout>-->
+
+
+                                        <!--                        </LinearLayout>-->
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                                <!--                <EditText-->
+                                <!--                    android:layout_width="0dp"-->
+                                <!--                    android:layout_height="match_parent"-->
+                                <!--                    android:layout_gravity="center|left"-->
+                                <!--                    android:layout_weight=".5"-->
+                                <!--                    android:background="@drawable/rectangle_yellow_box_layout"-->
+                                <!--                    android:fontFamily="@font/poppins_regular"-->
+                                <!--                    android:gravity="center|left"-->
+                                <!--                    android:paddingLeft="10dp"-->
+                                <!--                    android:hint="@string/select_state"-->
+                                <!--                    android:textColorHint="@color/colorblack"-->
+                                <!--                    android:textColor="@color/colorblack"-->
+                                <!--                    android:textSize="17dp">-->
+
+                                <!--                </EditText>-->
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/cityLL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/rectangle_yellow_box_layout"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <Spinner
+                                            android:id="@+id/city_spinner"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="46dp"
+                                            android:visibility="visible"
+                                            />
+
+                                        <!--                    <View-->
+                                        <!--                        android:layout_width="match_parent"-->
+                                        <!--                        android:layout_height="1dp"-->
+                                        <!--                        android:layout_marginTop="-3dp"-->
+                                        <!--                        android:layout_marginBottom="10dp"-->
+                                        <!--                        android:layout_gravity="center"-->
+                                        <!--                        android:background="@color/gray"></View>-->
+
+                                        <!--                        <LinearLayout-->
+                                        <!--                            android:id="@+id/selectState"-->
+                                        <!--                            android:layout_width="match_parent"-->
+                                        <!--                            android:layout_height="match_parent"-->
+                                        <!--                            android:orientation="horizontal">-->
+
+                                        <!--                            <LinearLayout-->
+                                        <!--                                android:layout_width="0dp"-->
+                                        <!--                                android:layout_height="match_parent"-->
+                                        <!--                                android:layout_weight=".86"-->
+                                        <!--                                android:orientation="horizontal">-->
+
+                                        <!--                                <TextView-->
+                                        <!--                                    android:id="@+id/selectStateTV"-->
+                                        <!--                                    android:layout_width="match_parent"-->
+                                        <!--                                    android:layout_height="match_parent"-->
+                                        <!--                                    android:text="Select State"-->
+                                        <!--                                    android:fontFamily="@font/poppins_regular"-->
+                                        <!--                                    android:gravity="center|left"-->
+                                        <!--                                    android:paddingLeft="10dp"-->
+                                        <!--                                    android:textColor="@color/colorblack"-->
+                                        <!--                                    android:textColorHint="@color/colorblack"-->
+                                        <!--                                    android:textSize="17dp"-->
+                                        <!--                                    >-->
+                                        <!--                                </TextView>-->
+
+                                        <!--                            </LinearLayout>-->
+
+                                        <!--                            <LinearLayout-->
+                                        <!--                                android:layout_width="0dp"-->
+                                        <!--                                android:layout_height="match_parent"-->
+                                        <!--                                android:layout_weight=".14"-->
+                                        <!--                                android:layout_gravity="center"-->
+                                        <!--                                android:gravity="center"-->
+                                        <!--                                android:orientation="horizontal">-->
+
+                                        <!--&lt;!&ndash;                                <ImageView&ndash;&gt;-->
+                                        <!--&lt;!&ndash;                                    android:layout_width="15dp"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;                                    android:layout_height="15dp"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;                                    android:src="@drawable/caret"&ndash;&gt;-->
+                                        <!--&lt;!&ndash;                                    >&ndash;&gt;-->
+
+
+                                        <!--&lt;!&ndash;                                </ImageView>&ndash;&gt;-->
+
+                                        <!--                            </LinearLayout>-->
+
+
+                                        <!--                        </LinearLayout>-->
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                                <!--                <EditText-->
+                                <!--                    android:layout_width="0dp"-->
+                                <!--                    android:layout_height="match_parent"-->
+                                <!--                    android:layout_gravity="center|left"-->
+                                <!--                    android:layout_weight=".5"-->
+                                <!--                    android:background="@drawable/rectangle_yellow_box_layout"-->
+                                <!--                    android:fontFamily="@font/poppins_regular"-->
+                                <!--                    android:gravity="center|left"-->
+                                <!--                    android:paddingLeft="10dp"-->
+                                <!--                    android:hint="@string/select_state"-->
+                                <!--                    android:textColorHint="@color/colorblack"-->
+                                <!--                    android:textColor="@color/colorblack"-->
+                                <!--                    android:textSize="17dp">-->
+
+                                <!--                </EditText>-->
+
+                            </LinearLayout>
+
+                            <!--            <LinearLayout-->
+                            <!--                android:layout_width="match_parent"-->
+                            <!--                android:layout_height="46dp"-->
+                            <!--                android:layout_marginTop="20dp"-->
+                            <!--                android:orientation="horizontal">-->
+
+                            <!--                <EditText-->
+                            <!--                    android:id="@+id/ciity"-->
+                            <!--                    android:layout_width="0dp"-->
+                            <!--                    android:layout_height="match_parent"-->
+                            <!--                    android:layout_gravity="center|left"-->
+                            <!--                    android:layout_weight=".5"-->
+                            <!--                    android:background="@drawable/rectangle_yellow_box_layout"-->
+                            <!--                    android:fontFamily="@font/poppins_regular"-->
+                            <!--                    android:gravity="center|left"-->
+                            <!--                    android:hint="@string/enter_city"-->
+                            <!--                    android:paddingLeft="10dp"-->
+                            <!--                    android:textColor="@color/colorblack"-->
+                            <!--                    android:textColorHint="@color/colorblack"-->
+                            <!--                    android:textSize="17dp">-->
+
+                            <!--                </EditText>-->
+
+                            <!--            </LinearLayout>-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|left"
+                                    android:background="@drawable/rectangle_yellow_box_layout"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center|left"
+                                    android:hint="@string/address"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="false"
+                                    android:textColor="@color/colorblack"
+                                    android:textColorHint="@color/colorblack"
+                                    android:textSize="17dp">
+
+                                </EditText>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/pinCode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|left"
+                                    android:background="@drawable/rectangle_yellow_box_layout"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center|left"
+                                    android:inputType="number"
+                                    android:singleLine="true"
+                                    android:maxLength="6"
+                                    android:hint="@string/enter_6_digit_pin_code"
+                                    android:paddingLeft="10dp"
+                                    android:textColor="@color/colorblack"
+                                    android:textColorHint="@color/colorblack"
+                                    android:textSize="17dp">
+
+                                </EditText>
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="38dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight=".5"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/submitButton"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:background="@drawable/rounded_corner_yellow_button"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:gravity="center"
+                                        android:text="@string/proceed"
+                                        android:textColor="@color/colorwhite"
+                                        android:textSize="17dp">
+
+                                    </TextView>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight=".5"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight=".5"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/cancelButton"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="20dp"
+                                            android:layout_marginRight="20dp"
+                                            android:background="@drawable/rounded_corner_red_button"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:text="@string/cancel"
+                                            android:textColor="@color/colorwhite"
+                                            android:textSize="17dp">
+
+                                        </TextView>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </ScrollView>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

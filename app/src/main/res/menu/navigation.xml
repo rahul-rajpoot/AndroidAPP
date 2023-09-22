@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/payout_report"
+        android:icon="@drawable/report32"
+        android:title="@string/title_catalog" />
+    <item
+        android:id="@+id/matching_tree"
+        android:icon="@drawable/nav32"
+        android:title="Matching Tree" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@mipmap/profile_icon"
+        android:title="@string/title_profile" />
+
+
+
+
+
+</menu>

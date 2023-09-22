@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/walletSummaryRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#F1EEEE"
+            app:cardElevation="20dp"
+            app:contentPadding="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorwhite"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/announceImage"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight=".55"
+                        android:background="@color/colorblack"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="@string/available_bal"
+                        android:textColor="@color/colorwhite"
+                        android:textSize="15dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/avaialbleBalance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight=".45"
+                        android:background="@color/yellow_btn_bg"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="..."
+                        android:textColor="@color/white"
+                        android:textSize="15dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/announceImage"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|left"
+                        android:layout_weight=".55"
+                        android:background="@color/colorblack"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:text="@string/ledger_bal"
+                        android:textColor="@color/colorwhite"
+                        android:textSize="15dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/ledgerBalance"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight=".45"
+                        android:background="@color/yellow_btn_bg"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="..."
+                        android:textColor="@color/white"
+                        android:textSize="15dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:weightSum="4"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangular_black_box_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:background="@color/colorblack"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="50dp"
+                            android:text="@string/credit"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="15dp">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangle_bottom_less_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/credit_1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/credit_1_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangle_bottom_less_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/credit_2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/credit_2_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangle_bottom_less_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/credit_3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/credit_3_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangle_bottom_less_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/credit_4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/credit_4_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangle_bottom_less_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/credit_5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/credit_5_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangle_bottom_less_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/credit_6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/credit_6_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangle_bottom_less_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/credit_7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/credit_7_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangle_bottom_less_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/credit_8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/credit_8_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangle_bottom_less_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/credit_9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/gray"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/credit_9_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/gray"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangular_box_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/credit_10"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/gray"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/credit_10_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/gray"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_weight=".33"-->
+<!--                        android:background="@drawable/rectangle_bottom_less_layout"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/credit_11"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_gravity="center|left"-->
+<!--                            android:layout_weight=".7"-->
+<!--                            android:fontFamily="@font/poppins_medium"-->
+<!--                            android:gravity="center|left"-->
+<!--                            android:paddingLeft="10dp"-->
+<!--                            android:text="..."-->
+<!--                            android:textColor="@color/colorblack"-->
+<!--                            android:textSize="15dp">-->
+
+<!--                        </TextView>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/credit_11_value"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_weight=".3"-->
+<!--                            android:fontFamily="@font/poppins_medium"-->
+<!--                            android:gravity="center"-->
+<!--                            android:padding="4dp"-->
+<!--                            android:text="..."-->
+<!--                            android:textColor="@color/colorblack"-->
+<!--                            android:textSize="15dp"></TextView>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_weight=".33"-->
+<!--                        android:background="@drawable/rectangle_bottom_less_layout"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/credit_12"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_gravity="center|left"-->
+<!--                            android:layout_weight=".7"-->
+<!--                            android:fontFamily="@font/poppins_medium"-->
+<!--                            android:gravity="center|left"-->
+<!--                            android:paddingLeft="10dp"-->
+<!--                            android:text="..."-->
+<!--                            android:textColor="@color/colorblack"-->
+<!--                            android:textSize="15dp">-->
+
+<!--                        </TextView>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/credit_12_value"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_weight=".3"-->
+<!--                            android:fontFamily="@font/poppins_medium"-->
+<!--                            android:gravity="center"-->
+<!--                            android:padding="4dp"-->
+<!--                            android:text="..."-->
+<!--                            android:textColor="@color/colorblack"-->
+<!--                            android:textSize="15dp"></TextView>-->
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_weight=".33"-->
+<!--                        android:background="@drawable/rectangular_box_layout"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/credit_13"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_gravity="center|left"-->
+<!--                            android:layout_weight=".7"-->
+<!--                            android:fontFamily="@font/poppins_medium"-->
+<!--                            android:gravity="center|left"-->
+<!--                            android:paddingLeft="10dp"-->
+<!--                            android:text="..."-->
+<!--                            android:textColor="@color/colorblack"-->
+<!--                            android:textSize="15dp">-->
+
+<!--                        </TextView>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/credit_13_value"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_weight=".3"-->
+<!--                            android:fontFamily="@font/poppins_medium"-->
+<!--                            android:gravity="center"-->
+<!--                            android:padding="4dp"-->
+<!--                            android:text="..."-->
+<!--                            android:textColor="@color/colorblack"-->
+<!--                            android:textSize="15dp"></TextView>-->
+
+<!--                    </LinearLayout>-->
+
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_weight=".5"-->
+<!--                        android:background="@drawable/rectangle_3_white_box_layout"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_gravity="center|left"-->
+<!--                            android:layout_weight=".5"-->
+<!--                            android:fontFamily="@font/poppins_medium"-->
+<!--                            android:gravity="center|left"-->
+<!--                            android:paddingLeft="10dp"-->
+<!--                            android:text="@string/direct_deposit"-->
+<!--                            android:textColor="@color/colorblack"-->
+<!--                            android:textSize="15dp">-->
+
+<!--                        </TextView>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/directDeposit"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_weight=".5"-->
+<!--                            android:fontFamily="@font/poppins_medium"-->
+<!--                            android:gravity="center"-->
+<!--                            android:padding="4dp"-->
+<!--                            android:text="..."-->
+<!--                            android:textColor="@color/colorblack"-->
+<!--                            android:textSize="15dp"></TextView>-->
+
+<!--                    </LinearLayout>-->
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:weightSum="1.66"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangular_black_box_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:background="@color/colorblack"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="50dp"
+                            android:text="@string/Deposit"
+                            android:textColor="@color/colorwhite"
+                            android:textSize="15dp">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangle_bottom_less_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/debit_1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/debit_1_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangle_bottom_less_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/debit_2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/debit_2_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangle_bottom_less_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/debit_3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/debit_3_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".33"
+                        android:background="@drawable/rectangular_box_layout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/debit_4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center|left"
+                            android:layout_weight=".7"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/debit_4_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".3"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center|right"
+                            android:layout_marginRight="10dp"
+                            android:padding="4dp"
+                            android:text="..."
+                            android:textColor="@color/colorblack"
+                            android:textSize="15dp"></TextView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</LinearLayout>

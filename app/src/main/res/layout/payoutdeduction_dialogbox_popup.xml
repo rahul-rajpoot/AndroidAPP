@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:background="#f1f1f1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#111"/>
+        <TableRow>
+
+            <TextView
+                android:paddingLeft="10dp"
+                android:layout_marginBottom="0.1dp"
+                android:layout_marginTop="0.1dp"
+                android:layout_marginRight="0.1dp"
+                android:textSize="16dp"
+                android:layout_weight="1"
+                android:text="Payid"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#111"/>
+            <TextView
+                android:layout_marginLeft="0.1dp"
+                android:textSize="16dp"
+                android:layout_marginTop="0.1dp"
+                android:fontFamily="serif-monospace"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:layout_weight="1"
+                android:text=""
+                android:textAlignment="textEnd"
+                android:id="@+id/payoutdeductionpayid"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#111"/>
+        <TableRow>
+            <TextView
+                android:textSize="16dp"
+                android:layout_weight="1"
+                android:text="Total Income"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="0.1dp"
+                android:layout_marginBottom="0.1dp"
+                android:layout_marginRight="0.1dp"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#111"/>
+
+            <TextView
+                android:layout_marginLeft="0.1dp"
+                android:textSize="16dp"
+                android:layout_marginTop="0.1dp"
+                android:fontFamily="serif-monospace"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:layout_weight="1"
+                android:text=""
+                android:textAlignment="textEnd"
+                android:id="@+id/payoutdeductiontotalincome"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                />
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#111"/>
+        <TableRow>
+
+            <TextView
+                android:id="@+id/payoutdeductiontdsrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.1dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="TDS @ 5%"
+                android:textSize="16dp" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#111"/>
+            <TextView
+
+                android:textSize="16dp"
+                android:fontFamily="serif-monospace"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:id="@+id/payoutdeductiontdsamt"
+                android:layout_weight="1"
+                android:text=""
+                android:layout_marginTop="0.1dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAlignment="textEnd"
+                />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#111"/>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.1dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="Processing @ 0%"
+                android:id="@+id/payoutdeductionprocessingrate"
+                android:textSize="16dp" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#111"/>
+            <TextView
+
+                android:textSize="16dp"
+                android:fontFamily="serif-monospace"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:id="@+id/payoutdeductionprocessing"
+                android:layout_weight="1"
+                android:text=""
+                android:layout_marginTop="0.1dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAlignment="textEnd"
+                />
+        </TableRow>  <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#111"/>
+        <TableRow>
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="0.1dp"
+                android:layout_weight="1"
+                android:text="Lock Amount"
+                android:paddingLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#111"/>
+            <TextView
+
+                android:textSize="16dp"
+                android:fontFamily="serif-monospace"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:id="@+id/payoutdeductionlockamt"
+                android:layout_weight="1"
+                android:text=""
+                android:layout_marginTop="0.1dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAlignment="textEnd"
+                />
+        </TableRow>  <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#111"/>
+        <TableRow>
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="0.1dp"
+                android:layout_weight="1"
+                android:text="Total Deduction"
+                android:paddingLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#111"/>
+            <TextView
+
+                android:textSize="16dp"
+                android:fontFamily="serif-monospace"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:id="@+id/payoutdeductiontotaldeduction"
+                android:layout_weight="1"
+                android:text=""
+                android:layout_marginTop="0.1dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAlignment="textEnd"
+                />
+        </TableRow>  <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#111"/>
+        <TableRow>
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="0.1dp"
+                android:layout_weight="1"
+                android:text="Net Payable"
+                android:paddingLeft="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#111"/>
+
+            <TextView
+
+                android:textSize="16dp"
+                android:fontFamily="serif-monospace"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                android:id="@+id/payoutdeductionnetpayable"
+                android:layout_weight="1"
+                android:text=""
+                android:layout_marginTop="0.1dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAlignment="textEnd"
+                />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

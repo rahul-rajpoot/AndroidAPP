@@ -1,0 +1,28 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_empty="true">
+        <layer-list>
+            <item
+                android:left="15dp"
+                android:right="15dp"
+                android:top="25dp"
+                android:bottom="25dp"
+                android:end="10dp"
+                android:start="10dp"
+                android:drawable="@drawable/plus">
+            </item>
+        </layer-list>
+    </item>
+
+    <item android:state_expanded="true">
+        <layer-list>
+            <item
+                android:left="15dp"
+                android:right="15dp"
+                android:top="25dp"
+                android:bottom="25dp"
+                android:drawable="@drawable/minus">
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

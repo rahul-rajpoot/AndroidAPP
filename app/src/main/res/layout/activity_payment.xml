@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/coordinatorpayment"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PaymentActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/payment_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbaarcolor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarColoredBackArrow"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.core.widget.NestedScrollView
+        android:background="@drawable/background_pagecolor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:background="@color/linecolor"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/colorBlack"
+                        android:paddingTop="10dp"
+                        android:layout_weight="0.8"
+                        android:padding="5dp"
+                        android:text="Shipping Details"/>
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/check"
+                        android:visibility="gone"
+                        android:layout_marginRight="10dp"
+                        android:buttonTint="@color/colorWhite"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorBlack"
+                        android:padding="5dp"
+                        android:layout_weight="1.2"
+                        android:text="Default Address"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hidelinealayout"
+                    android:orientation="vertical">
+
+                    <!---Address-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/loginedittextimgaebackground"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:padding="4dp"
+                                    android:layout_weight="1.5"
+                                    android:layout_marginRight="10dp"
+                                    android:text="Address"
+                                    />
+                                <EditText
+                                    android:id="@+id/addressdelivery"
+                                    android:hint=""
+                                    android:paddingLeft="5dp"
+                                    android:enabled="true"
+                                    android:background="@drawable/background_rectangle"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!---City-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:background="@drawable/loginedittextimgaebackground"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:padding="4dp"
+                                    android:text="City"
+                                    />
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="0dp"
+                                    android:text=""
+                                    android:layout_weight="1"
+                                    android:visibility="visible"
+                                    android:background="@drawable/background_rectangle"
+                                    android:enabled="true"
+                                    android:paddingLeft="5dp"
+                                    android:textSize="18dp"
+                                    android:id="@+id/citydefaultshow"
+                                    />
+                                <Spinner
+                                    android:id="@+id/citydelivery"
+                                    android:layout_width="match_parent"
+                                    android:hint="City"
+                                    android:visibility="gone"
+                                    android:layout_weight="1"
+                                    android:enabled="true"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!---District-->
+                   <!-- <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:background="@drawable/loginedittextimgaebackground"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:layout_height="match_parent"
+                                    android:padding="4dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:text="District"
+                                    />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="0dp"
+                                    android:text=""
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp"
+                                    android:background="@drawable/background_rectangle"
+                                    android:textSize="18dp"
+                                    android:enabled="false"
+                                    android:visibility="visible"
+                                    android:id="@+id/disctdefaultshow"
+                                    />
+                                <Spinner
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/disspinner"
+                                    android:enabled="false"
+                                    android:layout_weight="1"
+                                    android:visibility="gone"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>-->
+                    <!---State-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/loginedittextimgaebackground"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:padding="4dp"
+                                    android:layout_marginRight="10dp"
+                                    android:text="State"
+                                    />
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_marginRight="0dp"
+                                    android:paddingLeft="5dp"
+                                    android:background="@drawable/background_rectangle"
+                                    android:text=""
+                                    android:textSize="18dp"
+                                    android:enabled="true"
+                                    android:visibility="visible"
+                                    android:id="@+id/statedefaultshow"
+                                    />
+                                <Spinner
+                                    android:layout_width="match_parent"
+                                    android:enabled="true"
+                                    android:layout_weight="1"
+                                    android:visibility="gone"
+                                    android:id="@+id/statespinner"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!---Country-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:background="@drawable/loginedittextimgaebackground"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:layout_height="match_parent"
+                                    android:padding="4dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:text="Country"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="5dp"
+                                    android:layout_marginRight="0dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/background_rectangle"
+                                    android:text=""
+                                    android:textSize="18dp"
+                                    android:visibility="gone"
+                                    android:enabled="true"
+                                    android:id="@+id/countrydefaultshow"
+                                    />
+                                <Spinner
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/countryspinner"
+                                    android:layout_weight="1"
+                                    android:layout_height="30dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!---Pin code-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:background="@drawable/loginedittextimgaebackground"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:padding="4dp"
+                                    android:layout_marginRight="10dp"
+                                    android:text="Zip Code"
+                                    />
+                                <EditText
+                                    android:id="@+id/pincode"
+                                    android:hint=""
+                                    android:enabled="true"
+                                    android:background="@drawable/background_rectangle"
+                                    android:layout_weight="1"
+                                    android:singleLine="true"
+                                    android:layout_width="match_parent"
+                                    android:paddingLeft="5dp"
+                                    android:maxLength="9"
+                                    android:inputType="textPostalAddress"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!---Mobile No-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:background="@drawable/loginedittextimgaebackground"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:padding="4dp"
+                                    android:layout_marginRight="10dp"
+                                    android:text="Mobile No"
+                                    />
+                                <EditText
+                                    android:id="@+id/phn"
+                                    android:hint=""
+                                    android:enabled="false"
+                                    android:paddingLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/background_rectangle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!---EmailID-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:background="@drawable/loginedittextimgaebackground"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:padding="4dp"
+                                    android:text="Email ID"
+                                    />
+                                <EditText
+                                    android:id="@+id/emaild"
+                                    android:hint=""
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp"
+                                    android:enabled="false"
+                                    android:background="@drawable/background_rectangle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <!---Store -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:background="@drawable/loginedittextimgaebackground"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_weight="1.5"
+                                            android:layout_height="match_parent"
+                                            android:padding="4dp"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="10dp"
+                                            android:text="Select Store"
+                                            android:layout_gravity="center_vertical"
+                                            android:gravity="center_vertical"
+                                            />
+                                        <Spinner
+                                            android:layout_width="match_parent"
+                                            android:id="@+id/storeid"
+                                            android:layout_weight="1"
+                                            android:layout_height="30dp"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <!---Phone No-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:background="@drawable/loginedittextimgaebackground"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_weight="1.5"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="10dp"
+                                            android:padding="4dp"
+                                            android:layout_marginRight="10dp"
+                                            android:text="Mobile No"
+                                            />
+                                        <EditText
+                                            android:id="@+id/mobilenumber"
+                                            android:hint=""
+                                            android:enabled="false"
+                                            android:paddingLeft="5dp"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/background_rectangle"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!---payment details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/linecolor"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Payment Details"
+                        android:layout_margin="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16dp"
+                        android:id="@+id/pd"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <!---Total Amount-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2"
+                    android:background="@drawable/loginedittextimgaebackground"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="5dp"
+                                android:text="Total Amount"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:id="@+id/totalamountpayment"
+                                android:paddingRight="4dp"
+                                android:textAlignment="textEnd"
+                                android:layout_height="match_parent"
+                                android:text=""/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/linecolor"/>
+
+                <!---Total bv-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:weightSum="2"
+                    android:background="@drawable/loginedittextimgaebackground"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="5dp"
+                                android:text="Total BV"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:paddingRight="4dp"
+                                android:id="@+id/totalbvpayment"
+                                android:textAlignment="textEnd"
+                                android:layout_height="match_parent"
+                                android:text=""/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/linecolor"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/linecolor"/>
+
+                <!---Payable Amount-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/linecolor"/>
+                <!---Radio button courier delivery-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2"
+                    android:background="@drawable/loginedittextimgaebackground"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:paddingTop="5dp"
+                        android:text="Delivery Mode"/>
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/rg"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rdbtn"
+                            android:clickable="true"
+                            android:checked="true"
+                            android:text="Courier By Company"/>
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/linecolor"/>
+                <!---payment mode-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/loginedittextimgaebackground"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="5dp"
+                                android:text="Payment By *"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <Spinner
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:id="@+id/spinnerpaymentmode"
+                                android:paddingRight="0dp"
+                                android:textAlignment="textEnd"
+                                android:background="@drawable/background_rectangle"
+                                android:layout_height="wrap_content"
+                                android:text="75895.900"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/linecolor"/>
+                <!---Referance No-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/loginedittextimgaebackground"
+                    android:id="@+id/rednoll"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="5dp"
+                                android:text="Reference No."/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:paddingRight="0dp"
+                                android:id="@+id/refno"
+                                android:background="@drawable/loginedittextimgaebackground"
+                                android:textAlignment="textStart"
+                                android:singleLine="true"
+                                android:layout_height="match_parent"
+                                android:text=""/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/linecolor"/>
+                <!---bank name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:id="@+id/banknamell"
+                    android:visibility="gone"
+                    android:background="@drawable/loginedittextimgaebackground"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="5dp"
+                                android:text="Bank Name"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:paddingRight="0dp"
+                                android:id="@+id/inputbankname"
+                                android:background="@drawable/loginedittextimgaebackground"
+                                android:textAlignment="textStart"
+                                android:singleLine="true"
+                                android:layout_height="match_parent"
+                                android:hint="Enter Bank Name"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/linecolor"/>
+                <!---payment date-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/paymentdatell"
+                    android:visibility="gone"
+                    android:background="@drawable/loginedittextimgaebackground"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="5dp"
+                                android:text="Payment Date"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:id="@+id/date"
+                                android:paddingRight="4dp"
+                                android:textAlignment="textStart"
+                                android:background="@drawable/background_rectangle"
+                                android:layout_height="match_parent"
+                                android:text="dd//mm//yyyy"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/linecolor"/>
+                <!---Remarks-->
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    >
+                    <TextView
+                        android:text="Remark"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/remarkspayment"
+                        android:background="@drawable/background_rectangle"
+                        android:layout_height="100dp" />
+                </LinearLayout>-->
+
+                <!---Button-->
+
+                <LinearLayout
+                    android:id="@+id/linearout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_gravity="end"
+                    android:orientation="horizontal">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/toolbaarcolor"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorWhite"
+                        android:layout_margin="5dp"
+                        android:id="@+id/makepayment_btn"
+                        android:text="Make Payment"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorButton"
+                        android:id="@+id/cancel_button_payment"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:text="Cancel"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

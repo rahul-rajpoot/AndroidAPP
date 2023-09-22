@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_pagecolor"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileManager.WelcomeLetterFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1.5"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:textSize="14sp"
+                                android:textColor="#0054a5"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="Shisu"
+                                android:textStyle="bold"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14dp"
+                                android:textColor="#050505"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginLeft="10dp"
+                                android:textStyle="normal"
+                                android:padding="5dp"
+                                android:text="Welcome to Shisu"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/circularimage_oval"
+                                android:orientation="vertical">
+                                <com.mikhaellopez.circularimageview.CircularImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    app:civ_border_width="0dp"
+                                    android:scaleType="centerInside"
+                                    app:civ_border_color="#86E622"
+                                    android:id="@+id/welcomeletteimageuser"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:orientation="vertical">
+
+                        <me.biubiubiu.justifytext.library.JustifyTextView
+                            android:id="@+id/paragraph"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="0dp"
+                            android:justificationMode="inter_word"
+                            android:padding="5dp"
+                            android:text=" "
+                            android:textColor="#050505"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="-10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PERSONAL DETAILS"
+                    android:textColor="#808080"
+                    android:textStyle="normal"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:cardCornerRadius="0dp"
+                app:cardMaxElevation="15dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name:"
+                                android:textColor="#c5c3c3"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="15dp"
+                                android:textStyle="normal"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:id="@+id/pdwlname"
+                                android:textSize="13sp"
+                                android:textColor="#212026"
+                                android:textStyle="normal"
+                                android:layout_marginLeft="15dp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Birthday:"
+                                android:textColor="#c5c3c3"
+                                android:textSize="13sp"
+                                android:textStyle="normal"
+                                android:paddingLeft="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#212026"
+                                android:id="@+id/pdwlbday"
+                                android:textSize="13sp"
+                                android:paddingLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="15dp"
+                                android:textStyle="normal"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gender:"
+                                android:textColor="#c5c3c3"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="15dp"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textStyle="normal"
+                                android:textColor="#212026"
+                                android:id="@+id/pdwlgender"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="15dp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Registration Date:"
+                                android:textSize="13sp"
+                                android:textColor="#c5c3c3"
+                                android:textStyle="normal"
+                                android:paddingLeft="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#212026"
+                                android:text=""
+                                android:id="@+id/pdwlregdate"
+                                android:textSize="13sp"
+                                android:paddingLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="15dp"
+                                android:textStyle="normal"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Email:"
+                                android:textColor="#c5c3c3"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="15dp"
+                                android:textStyle="normal"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:id="@+id/pdwlemail"
+                                android:textColor="#212026"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="15dp"
+                                android:textStyle="normal"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Mobile:"
+                                android:textColor="#c5c3c3"
+                                android:textSize="13sp"
+                                android:textStyle="normal"
+                                android:paddingLeft="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:id="@+id/pdwlmobile"
+                                android:textSize="13sp"
+                                android:paddingLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="15dp"
+                                android:textStyle="normal"
+                                android:textColor="#212026"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Username:"
+                                android:textColor="#c5c3c3"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="15dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#212026"
+                                android:id="@+id/pdwlusername"
+                                android:layout_marginLeft="15dp"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#c5c3c3"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                android:paddingLeft="5dp"
+                                android:layout_marginLeft="15dp"
+                                android:text="Address:"
+
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#212026"
+                                android:id="@+id/pdwladdress"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="15dp"
+                                android:paddingLeft="5dp"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="City:"
+                                android:textColor="#c5c3c3"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                               android:layout_marginLeft="15dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#212026"
+                                android:id="@+id/pdwlcity"
+                                android:textSize="13sp"
+                                android:layout_marginLeft="15dp"
+                                android:textStyle="normal"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textColor="#c5c3c3"
+                                android:textStyle="normal"
+                                android:text="State:"
+                                android:paddingLeft="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#212026"
+                                android:id="@+id/pdwlState"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="15dp"
+                                android:paddingLeft="5dp"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Zip Code:"
+                                android:textColor="#c5c3c3"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                               android:layout_marginLeft="15dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#212026"
+                                android:id="@+id/pdwlpincode"
+                                android:layout_marginLeft="15dp"
+                                android:textSize="13sp"
+                                android:textStyle="normal"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Country:"
+                                android:textColor="#c5c3c3"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                android:paddingLeft="5dp"
+                                android:layout_marginLeft="15dp"
+                                />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#212026"
+                                android:id="@+id/pdwlcountry"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="15dp"
+                                android:paddingLeft="5dp"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+ .............................. ...............................................
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <FrameLayout
+                            android:id="@+id/fram7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".8">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Nominee Name:"
+                                            android:paddingLeft="5dp"
+                                            android:fontFamily="sans-serif-black"
+                                            android:textColor="@color/colorBlack"
+                                            android:textSize="14dp"
+                                            android:textStyle="bold"
+                                            android:layout_weight="1"
+                                            />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text=""
+                                            android:textColor="#444242"
+                                            android:id="@+id/pdwlnname"
+                                            android:layout_weight="1"
+                                            />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.2">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/noi_name_profile"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:text=""
+                                            android:layout_marginLeft="5dp"
+                                            android:textColor="@color/colorBlack"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/fram8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight=".8">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="5dp"
+                                            android:textSize="14dp"
+                                            android:textStyle="bold"
+                                            android:fontFamily="sans-serif-black"
+                                            android:textColor="@color/colorBlack"
+                                            android:text="Nominee Relation:"
+                                            android:layout_weight="1"
+                                            />
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text=""
+                                            android:textColor="#444242"
+                                            android:id="@+id/pdwlnrelation"
+                                            android:layout_weight="1"
+                                            />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.2">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/noi_rel_profile"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:text=""
+                                            android:layout_marginLeft="5dp"
+                                            android:textColor="@color/colorBlack"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="REGISTERED OFFICE:"
+                    android:textColor="#808080"
+                    android:textStyle="normal"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:cardCornerRadius="0dp"
+                app:cardMaxElevation="15dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="13sp"
+                        android:padding="15dp"
+                        android:textStyle="normal"
+                        android:textColor="#212026"
+                        android:id="@+id/addressoffice"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

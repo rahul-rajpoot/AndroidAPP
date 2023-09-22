@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_pagecolor"
+    tools:context=".Shopping.PurchasedListFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="5dp"
+                app:srcCompat="@drawable/filter"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:text="Filter"
+                android:textColor="@color/colorBlack"
+                />
+            <View
+
+                android:layout_gravity="end"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/linecolor"/>
+            <ImageView
+                android:layout_weight="5"
+                android:layout_gravity="center|right"
+                android:id="@+id/closecardpurchaselist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/arrow_down"/>
+            <ImageView
+                android:layout_weight="5"
+                android:visibility="gone"
+                android:layout_gravity="center|right"
+                android:id="@+id/opencardpurchaselist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/arrow_up"/>
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/cardviewdeliveryreport"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    app:cardElevation="20dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:hint="Order No."
+                        android:paddingLeft="5dp"
+                        android:singleLine="true"
+                        android:textSize="13sp"
+                        android:textColor="#212026"
+                        android:textStyle="normal"
+                        android:background="@drawable/spinner_background"
+                        android:id="@+id/plorderno"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    app:cardBackgroundColor="@color/linecolor2"
+                    app:cardElevation="20dp">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:id="@+id/stauspl"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        app:cardElevation="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="From Date"
+                            android:visibility="gone"
+                            android:id="@+id/fromdatehide"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/linecolor2"
+                            android:textSize="16dp"
+                            android:paddingLeft="5dp"
+                            android:gravity="center_vertical"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:focusable="false"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="From Date"
+                            android:background="@color/linecolor2"
+                            android:textColor="@color/colorBlack"
+                            android:id="@+id/indatefrompl"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="15dp"
+                        app:cardElevation="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="To Date"
+                            android:id="@+id/todatehide"
+                            android:layout_marginTop="10dp"
+                            android:textSize="16dp"
+                            android:visibility="gone"
+                            android:paddingLeft="5dp"
+                            android:background="@color/linecolor2"
+                            android:gravity="center_vertical"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:gravity="center"
+                            android:text="To Date"
+                            android:focusable="false"
+                            android:background="@color/linecolor2"
+                            android:textColor="@color/colorBlack"
+                            android:id="@+id/indatetopl"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="160dp"
+                    android:layout_height="30dp"
+                    android:text="Apply Filter"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/toolbaarcolor"
+                    android:id="@+id/filterbtn"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:id="@+id/framepurchasedlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

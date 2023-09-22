@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#CFCDCD</color>
+    <color name="colorPrimaryDark">#CFCDCD</color>
+<!--    <color name="colorAccent">#0054a5</color>-->
+<!--    <color name="tablehead">#287BB4</color>-->
+    <color name="colorAccent">#DD1D22</color>
+    <color name="tablehead">#DC3E42</color>
+    <color name="lighred">#F86C6B</color>
+    <color name="green">#1AAF1F</color>
+    <color name="drawer_green">#03b743</color>
+<!--    <color name="drawer_green_bg">#edfff3</color>-->
+    <color name="drawer_green_bg">#FAF3F3</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="linecolor">#DDDDDD</color>
+    <color name="linecolor2">#ECECEC</color>
+    <color name="filter">#C9C0C0</color>
+    <color name="colorButton">#DA421E</color>
+    <color name="unactive">#8A8787</color>
+    <color name="textview">#353535</color>
+    <color name="colorBackground">#FDF9EE</color>
+    <color name="tool">#C3C3C3</color>
+    <color name="tool1">#F7F7F7</color>
+    <color name="btnsignActive">#00E676</color>
+    <color name="greenflag">#004D00</color>
+    <color name="shadow">#66000000</color>
+    <color name="unselectedtab">#659100</color>
+    <color name="tabselectedcolor">#077600</color>
+
+    <color name="myteamcolor">#212026</color>
+    <color name="teamsizcolor">#6a6464</color>
+<!--    <color name="walletpriscolor">#0050a1</color>-->
+    <color name="walletpriscolor">#DD1D22</color>
+    <color name="circlecolor">#FF9800</color>
+<!--    <color name="toolbaarcolor">#0054a5</color>-->
+    <color name="toolbaarcolor">#DD1D22</color>
+    <color name="colorrgray2">#F5F3F3</color>
+    <color name="colornewregister">#15317E</color>
+
+<!--    <color name="menu_blue">#0217C8</color>-->
+<!--    <color name="colorblue">#0084C8</color>-->
+    <color name="menu_blue">#DD1D22</color>
+    <color name="colorblue">#D84448</color>
+    <color name="colorgolden">#C8AE00</color>
+<!--    <color name="blue_color">#135ff4</color>-->
+    <color name="blue_color">#DD1D22</color>
+    <color name="gray_color">#b3b3b3</color>
+<!--    <color name="blue_light_color">#115cf3</color>-->
+    <color name="blue_light_color">#DD1D22</color>
+<!--    <color name="blue_lightest_color">#79bdff</color>-->
+    <color name="blue_lightest_color">#D6595C</color>
+    <color name="blue_lightest_disabled_color">#CDE0F3</color>
+    <color name="yellow_lightest_disabled_color">#E4E8AE</color>
+<!--    <color name="blue_dark_color">#0054e5</color>-->
+    <color name="blue_dark_color">#DD1D22</color>
+<!--    <color name="blue_heading">#0054a5</color>-->
+    <color name="blue_heading">#DD1D22</color>
+    <color name="blue_lighter_color">#ebf3f5</color>
+<!--    <color name="total_incentive">#0543aa</color>-->
+    <color name="total_incentive">#DD1D22</color>
+    <color name="light_blue_bg">#eaf3fc</color>
+    <color name="BtnColor">#FF0000</color>
+
+
+<!--    Shop Now colors-->
+<!--    <color name="colortoolbaar">#000000</color>-->
+<!--    <color name="colordasbordtext">#000000</color>-->
+<!--    <color name="colordasbordtext2">#0012ff</color>-->
+<!--    <color name="yellow_btn_bg">#fcd522</color>-->
+<!--    <color name="yellow_color">#f2d327</color>-->
+<!--    <color name="yellow_bg">#fefbf2</color>-->
+<!--    <color name="coming_text_clr">#d8b648</color>-->
+<!--    <color name="yellow_edit_color">#fff8de</color>-->
+<!--    <color name="yellow_round_btn_color">#e8b207</color>-->
+<!--    <color name="red_round_btn_color">#e80607</color>-->
+<!--    <color name="pro_list_yellow_txt_clr">#e1b305</color>-->
+<!--    <color name="date_yellow_clr">#ffedc3</color>-->
+<!--    <color name="apply_filter_btn">#d8b648</color>-->
+<!--    <color name="confirmed_green">#1c8b00</color>-->
+<!--    <color name="pending_red">#ee0000</color>-->
+<!--    <color name="product_name_yellow">#efb506</color>-->
+<!--    <color name="mode_name">#ed9c00</color>-->
+
+    <color name="colortoolbaar">#000000</color>
+    <color name="colordasbordtext">#000000</color>
+<!--    <color name="colordasbordtext2">#0012ff</color>-->
+    <color name="colordasbordtext2">#DD1D22</color>
+    <color name="yellow_btn_bg">@color/blue_color</color>
+    <color name="yellow_color">@color/blue_lightest_color</color>
+    <color name="yellow_color_disabled">@color/blue_lightest_disabled_color</color>
+    <color name="yellow_bg">@color/colorWhite</color>
+    <color name="coming_text_clr">@color/blue_color</color>
+<!--    <color name="yellow_edit_color">#DAE2F1</color>-->
+    <color name="yellow_edit_color">#f8fcff</color>
+    <color name="yellow_disabled_edit_color">#f9fef8</color>
+    <color name="yellow_round_btn_color">@color/blue_dark_color</color>
+    <color name="red_round_btn_color">#e80607</color>
+    <color name="pro_list_yellow_txt_clr">@color/blue_light_color</color>
+    <color name="date_yellow_clr">#87A9EF</color>
+    <color name="apply_filter_btn">@color/blue_light_color</color>
+    <color name="confirmed_green">#1c8b00</color>
+    <color name="pending_red">#ee0000</color>
+    <color name="product_name_yellow">@color/blue_light_color</color>
+    <color name="mode_name">@color/blue_light_color</color>
+
+
+    <color name="colorblack">#FF000000</color>
+    <color name="colorwhite">#FFFFFFFF</color>
+
+    <color name="colorgoldwallet">#fe8534</color>
+<!--    <color name="colorsilverwallet">#0924ed</color>-->
+    <color name="colorsilverwallet">#DD1D22</color>
+    <color name="colorplatinumwallet">#04bff6</color>
+    <color name="colordiamondwallet">#dc04e5</color>
+    <color name="colorloan">#03b277</color>
+    <color name="colorfdaccount">#db5201</color>
+<!--    <color name="tabselectedcolor">#DA421E</color>-->
+<!--    <color name="colorButton">#DA421E</color>-->
+
+    <color name="gray">#939393</color>
+    <color name="gray_light">#E8E7E7</color>
+    <color name="ripple_white">#FD91908F</color>
+    <color name="ripple_dark">#FD91908F</color>
+
+
+
+
+
+
+
+
+    <color name="backgroundcolor">#58EBBD</color>
+
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#FF9800</color>
+    <color name="dot_dark_screen2">#FF9800</color>
+    <color name="dot_dark_screen3">#FF9800</color>
+
+<!--    <color name="dot_light_screen1">#1d5a99</color>-->
+    <color name="dot_light_screen1">#DD1D22</color>
+    <color name="dot_light_screen2">#DD1D22</color>
+    <color name="dot_light_screen3">#DD1D22</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+
+    </array>
+
+
+
+    ..................................................
+
+    <color name="white">#FFFFFF</color>
+    <color name="light_white">#fcfcfc</color>
+    <color name="persian_green_primary">#0DAC8F</color>
+    <color name="persian_green_dark">#0A927A</color>
+    <color name="persian_green_accent">#0A927A</color>
+    <color name="pink_primary">#EB1E63</color>
+    <color name="pink_dark">#C0175C</color>
+    <color name="pink_accent">#C0175C</color>
+<!--    <color name="royal_blue_primary">#4C63E2</color>-->
+    <color name="royal_blue_primary">#DD1D22</color>
+<!--    <color name="royal_blue_dark">#4055BF</color>-->
+    <color name="royal_blue_dark">#DD1D22</color>
+<!--    <color name="royal_blue_accent">#4055BF</color>-->
+    <color name="royal_blue_accent">#DD1D22</color>
+    <color name="purple_primary">#9C28B1</color>
+    <color name="purple_dark">#7A1FA2</color>
+    <color name="purple_accent">#7A1FA2</color>
+    <color name="orange_accent">#F3A62E</color>
+<!--    <color name="indigo">#3E50AE</color>-->
+    <color name="indigo">#DD1D22</color>
+    <color name="pink">#FF427C</color>
+    <color name="grey">#C2C2C2</color>
+
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FFDD1D22</color>
+    <color name="purple_700">#FFDD1D22</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="blue">#DD1D22</color>
+<!--    <color name="grey">#D3D3D3</color>-->
+    <color name="light_grey">#f1f1f1</color>
+    <color name="sky_blue">#f6fbff</color>
+<!--    <color name="pink">#e90133</color>-->
+    <color name="dark_blue">#DD1D22</color>
+    <color name="cb_blue_text">#DD1D22</color>
+    <color name="toast_background">#B4CFEC</color>
+    <color name="kyc_bar_color">#DD1D22</color>
+    <color name="kyc_button_color">#DD1D22</color>
+    <color name="dark_grey">#696969</color>
+    <color name="layout_color">#FD91908F</color>
+
+<!--    <color name="purple_200">#FFBB86FC</color>-->
+<!--    <color name="purple_500">#FF6200EE</color>-->
+<!--    <color name="purple_700">#FF3700B3</color>-->
+<!--    <color name="teal_200">#FF03DAC5</color>-->
+<!--    <color name="teal_700">#FF018786</color>-->
+<!--    <color name="black">#FF000000</color>-->
+<!--    <color name="blue">#013bb7</color>-->
+<!--&lt;!&ndash;    <color name="grey">#D3D3D3</color>&ndash;&gt;-->
+<!--    <color name="light_grey">#f1f1f1</color>-->
+<!--    <color name="sky_blue">#f6fbff</color>-->
+<!--&lt;!&ndash;    <color name="pink">#e90133</color>&ndash;&gt;-->
+<!--    <color name="dark_blue">#0216d7</color>-->
+<!--    <color name="cb_blue_text">#006cb5</color>-->
+<!--    <color name="toast_background">#B4CFEC</color>-->
+<!--    <color name="kyc_bar_color">#006cb5</color>-->
+<!--    <color name="kyc_button_color">#0451c5</color>-->
+<!--    <color name="dark_grey">#696969</color>-->
+<!--    <color name="layout_color">#FD91908F</color>-->
+
+</resources>

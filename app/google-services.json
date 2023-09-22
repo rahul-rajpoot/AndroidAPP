@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "300123597447",
+    "project_id": "shisu-ba887",
+    "storage_bucket": "shisu-ba887.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300123597447:android:bec09b00a631ec266d6622",
+        "android_client_info": {
+          "package_name": "com.alps.shisu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300123597447-4bqlorv7ep4ue7oict7ltj9uqtulls2u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alps.shisu",
+            "certificate_hash": "bd31c0d5afdaa75eaafe88757365e0fb9ad60f07"
+          }
+        },
+        {
+          "client_id": "300123597447-9c890elrao642ncfbk6onpk4caqu3nee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeav-hF9hdSlJAZ5_35QnvSCSc0ZAGfm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300123597447-9c890elrao642ncfbk6onpk4caqu3nee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

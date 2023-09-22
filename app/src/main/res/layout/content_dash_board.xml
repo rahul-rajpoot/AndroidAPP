@@ -1,0 +1,2294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashbackimage"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DashBoard"
+    tools:showIn="@layout/app_bar_dash_board">
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.8">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="Total Income"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:id="@+id/liner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/texttotallogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/texttotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_horizontal"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview02"
+                        android:layout_width="90dp"
+                        android:layout_height="85dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="75dp"
+                        android:layout_marginRight="15dp"
+                        android:elevation="15dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardMaxElevation="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="23dp"
+                                android:layout_height="23dp"
+                                app:srcCompat="@drawable/walleticonss" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Wallet"
+                                android:textColor="@color/myteamcolor"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/cartcurrencysymbol"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:text=""
+                                    android:textColor="@color/walletpriscolor"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textsamount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textColor="@color/walletpriscolor"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview03"
+                        android:layout_width="90dp"
+                        android:layout_height="85dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="75dp"
+                        android:elevation="15dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardMaxElevation="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/teamsizeicons" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Team Size"
+                                android:textColor="@color/myteamcolor"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/teamsiztext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/walletpriscolor"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview04"
+                        android:layout_width="90dp"
+                        android:layout_height="85dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="75dp"
+                        android:layout_marginRight="25dp"
+                        android:elevation="15dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardMaxElevation="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/mydirecticons" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="My Direct"
+                                android:textColor="@color/myteamcolor"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/mydirectrytext1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/walletpriscolor"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/liner1"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/colorPrimary"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimary"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="60dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@drawable/level_table_header"
+                                android:backgroundTint="@color/blue_color"
+                                android:orientation="vertical"
+                                android:visibility="invisible">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="5dp">
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        app:srcCompat="@drawable/trophystricon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="30dp"
+                                        android:text="My Package"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/textmember"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="10dp"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                </RelativeLayout>
+
+                                <View
+                                    android:id="@+id/view00"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@+id/relative01"
+                                    android:layout_marginTop="5dp"
+                                    android:background="#fff"
+                                    android:visibility="gone" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="1dp"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        app:srcCompat="@drawable/goldbankicons144" />
+
+                                    <!--                                <TextView-->
+                                    <!--                                    android:id="@+id/text01"-->
+                                    <!--                                    android:layout_width="wrap_content"-->
+                                    <!--                                    android:layout_height="wrap_content"-->
+                                    <!--                                    android:text="Gold Bank A/C No"-->
+                                    <!--                                    android:textSize="14sp"-->
+                                    <!--                                    android:textStyle="normal"-->
+                                    <!--                                    android:textColor="@color/white"-->
+                                    <!--                                    android:layout_marginLeft="30dp"-->
+                                    <!--                                    android:layout_marginTop="17dp"-->
+                                    <!--                                    />-->
+
+                                    <TextView
+                                        android:id="@+id/text01"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="30dp"
+                                        android:layout_marginTop="17dp"
+                                        android:text="My Id"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        android:textStyle="normal" />
+
+                                    <TextView
+                                        android:id="@+id/textpv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/text01"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="30dp"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        android:textStyle="normal"
+                                        android:visibility="gone" />
+
+                                    <TextView
+                                        android:id="@+id/textgoldbankno"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="10dp"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        android:textStyle="normal" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview002"
+                                android:layout_width="match_parent"
+                                android:layout_height="115dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginRight="15dp"
+                                android:elevation="15dp"
+                                app:cardCornerRadius="0dp"
+                                app:cardMaxElevation="15dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RelativeLayout
+                                        android:id="@+id/relative1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginRight="2dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="5dp"
+                                            app:srcCompat="@drawable/myteamlogo" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="30dp"
+                                            android:text="@string/level_details"
+                                            android:textColor="@color/myteamcolor"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/relative2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@+id/relative1"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="3dp">
+
+                                        <LinearLayout
+                                            android:id="@+id/linear"
+                                            android:layout_width="55dp"
+                                            android:layout_height="55dp"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_marginLeft="15dp"
+                                            android:background="@drawable/background_layout3"
+                                            android:backgroundTint="@color/blue_color"
+                                            android:gravity="center">
+
+                                            <TextView
+                                                android:id="@+id/textcount1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textColor="@color/white"
+                                                android:textSize="16sp"
+                                                android:textStyle="bold" />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/textteamsiz"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/linear"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="15dp"
+                                            android:text="Team Size"
+                                            android:textColor="@color/teamsizcolor"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+
+                                        <LinearLayout
+                                            android:id="@+id/linear2"
+                                            android:layout_width="55dp"
+                                            android:layout_height="55dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:background="@drawable/background_layout3"
+                                            android:backgroundTint="@color/blue_color"
+                                            android:gravity="center">
+
+                                            <TextView
+                                                android:id="@+id/textcount2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textColor="@color/white"
+                                                android:textSize="16sp"
+                                                android:textStyle="bold" />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/textteamsiz2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/linear2"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="10dp"
+                                            android:text="My Directs"
+                                            android:textColor="@color/teamsizcolor"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+
+                                        <LinearLayout
+                                            android:id="@+id/linear3"
+                                            android:layout_width="55dp"
+                                            android:layout_height="55dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginRight="15dp"
+                                            android:background="@drawable/background_layout3"
+                                            android:backgroundTint="@color/blue_color"
+                                            android:gravity="center">
+
+                                            <TextView
+                                                android:id="@+id/textcount3"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:text="0"
+                                                android:textColor="@color/white"
+                                                android:textSize="16sp"
+                                                android:textStyle="bold" />
+
+                                        </LinearLayout>
+
+                                        <TextView
+                                            android:id="@+id/textteamsiz3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/linear2"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginRight="10dp"
+                                            android:text="My Indirects"
+                                            android:textColor="@color/teamsizcolor"
+                                            android:textSize="12sp"
+                                            android:textStyle="normal" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview003"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="15dp"
+                                android:elevation="15dp"
+                                android:visibility="gone"
+                                app:cardCornerRadius="0dp"
+                                app:cardMaxElevation="15dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RelativeLayout
+                                        android:id="@+id/relative02"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="7dp"
+                                        android:layout_marginRight="2dp"
+                                        android:layout_marginBottom="5dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginLeft="5dp"
+                                            app:srcCompat="@drawable/walleticon" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="30dp"
+                                            android:text="Business Details"
+                                            android:textColor="@color/myteamcolor"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                    </RelativeLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/relative003"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:layout_below="@+id/relative02"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="3dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@drawable/level_table_header"
+                                        android:backgroundTint="@color/blue_color"
+                                        android:weightSum="3.5">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center|left"
+                                                android:layout_marginLeft="10dp"
+                                                android:gravity="center|left"
+                                                android:text="Levels"
+                                                android:textColor="@color/white"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+
+                                            <!--                                    <View-->
+                                            <!--                                        android:layout_width="match_parent"-->
+                                            <!--                                        android:layout_height="1.5dp"-->
+                                            <!--                                        android:layout_marginLeft="5dp"-->
+                                            <!--                                        android:layout_marginTop="2dp"-->
+                                            <!--                                        android:background="#fdcccbca" />-->
+
+                                        </LinearLayout>
+
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/business_txt"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center|right"
+                                                android:gravity="center|right"
+                                                android:text="Business (₹)"
+                                                android:textColor="@color/white"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+
+                                            <!--                                        <View-->
+                                            <!--                                            android:layout_width="match_parent"-->
+                                            <!--                                            android:layout_height="1.5dp"-->
+                                            <!--                                            android:layout_marginLeft="20dp"-->
+                                            <!--                                            android:layout_marginTop="2dp"-->
+                                            <!--                                            android:background="#fdcccbca" />-->
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:layout_weight=".5"
+                                            android:gravity="center"
+                                            android:orientation="vertical"></LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/income_txt"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center|right"
+                                                android:layout_marginRight="10dp"
+                                                android:gravity="center|right"
+                                                android:text="Income (₹)"
+                                                android:textColor="@color/white"
+                                                android:textSize="12sp"
+                                                android:textStyle="bold" />
+
+                                            <!--                                    <View-->
+                                            <!--                                        android:layout_width="match_parent"-->
+                                            <!--                                        android:layout_height="1.5dp"-->
+                                            <!--                                        android:layout_marginLeft="5dp"-->
+                                            <!--                                        android:layout_marginTop="2dp"-->
+                                            <!--                                        android:background="#fdcccbca" />-->
+
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/relative003"
+                                        android:layout_margin="10dp"
+                                        android:orientation="horizontal">
+
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/rv_level_details"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="0dp"></androidx.recyclerview.widget.RecyclerView>
+
+
+                                    </LinearLayout>
+
+                                    <!--                                <RelativeLayout-->
+                                    <!--                                    android:layout_width="match_parent"-->
+                                    <!--                                    android:layout_below="@+id/relative02"-->
+                                    <!--                                    android:layout_height="match_parent">-->
+
+                                    <!--                                    <androidx.cardview.widget.CardView-->
+                                    <!--                                        android:layout_width="match_parent"-->
+                                    <!--                                        android:layout_height="wrap_content"-->
+                                    <!--                                        android:elevation="15dp"-->
+                                    <!--                                        android:layout_margin="10dp"-->
+                                    <!--                                        app:cardCornerRadius="0dp"-->
+                                    <!--                                        app:cardMaxElevation="15dp">-->
+
+                                    <!--                                        <RelativeLayout-->
+                                    <!--                                            android:layout_width="match_parent"-->
+                                    <!--                                            android:layout_height="match_parent">-->
+
+
+                                    <!--                                            <LinearLayout-->
+                                    <!--                                                android:id="@+id/relative003"-->
+                                    <!--                                                android:layout_width="match_parent"-->
+                                    <!--                                                android:layout_height="35dp"-->
+                                    <!--                                                android:background="@drawable/level_table_header"-->
+                                    <!--                                                android:weightSum="4.5">-->
+
+                                    <!--                                                <LinearLayout-->
+                                    <!--                                                    android:layout_width="0dp"-->
+                                    <!--                                                    android:layout_height="match_parent"-->
+                                    <!--                                                    android:layout_gravity="center"-->
+                                    <!--                                                    android:layout_weight="1"-->
+                                    <!--                                                    android:gravity="center"-->
+                                    <!--                                                    android:orientation="vertical">-->
+
+                                    <!--                                                    <TextView-->
+                                    <!--                                                        android:layout_width="wrap_content"-->
+                                    <!--                                                        android:layout_height="wrap_content"-->
+                                    <!--                                                        android:layout_gravity="center|left"-->
+                                    <!--                                                        android:layout_marginLeft="10dp"-->
+                                    <!--                                                        android:gravity="center|left"-->
+                                    <!--                                                        android:text="Levels"-->
+                                    <!--                                                        android:textColor="@color/white"-->
+                                    <!--                                                        android:textSize="14sp"-->
+                                    <!--                                                        android:textStyle="bold" />-->
+
+                                    <!--                                                    &lt;!&ndash;                                    <View&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                        android:layout_width="match_parent"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                        android:layout_height="1.5dp"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                        android:layout_marginLeft="5dp"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                        android:layout_marginTop="2dp"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                        android:background="#fdcccbca" />&ndash;&gt;-->
+
+                                    <!--                                                </LinearLayout>-->
+
+                                    <!--                                                <LinearLayout-->
+                                    <!--                                                    android:layout_width="0dp"-->
+                                    <!--                                                    android:layout_height="match_parent"-->
+                                    <!--                                                    android:layout_gravity="center"-->
+                                    <!--                                                    android:layout_weight="1"-->
+                                    <!--                                                    android:gravity="center"-->
+                                    <!--                                                    android:orientation="vertical">-->
+
+                                    <!--                                                    <TextView-->
+                                    <!--                                                        android:layout_width="wrap_content"-->
+                                    <!--                                                        android:layout_height="wrap_content"-->
+                                    <!--                                                        android:layout_gravity="center"-->
+                                    <!--                                                        android:gravity="center"-->
+                                    <!--                                                        android:text="Partners"-->
+                                    <!--                                                        android:textColor="@color/white"-->
+                                    <!--                                                        android:textSize="14sp"-->
+                                    <!--                                                        android:textStyle="bold" />-->
+
+                                    <!--                                                    &lt;!&ndash;                                        <View&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                            android:layout_width="match_parent"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                            android:layout_height="1.5dp"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                            android:layout_marginLeft="20dp"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                            android:layout_marginTop="2dp"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                            android:background="#fdcccbca" />&ndash;&gt;-->
+
+                                    <!--                                                </LinearLayout>-->
+
+                                    <!--                                                <LinearLayout-->
+                                    <!--                                                    android:layout_width="0dp"-->
+                                    <!--                                                    android:layout_height="match_parent"-->
+                                    <!--                                                    android:layout_gravity="center"-->
+                                    <!--                                                    android:layout_weight="1"-->
+                                    <!--                                                    android:gravity="center"-->
+                                    <!--                                                    android:orientation="vertical">-->
+
+                                    <!--                                                    <TextView-->
+                                    <!--                                                        android:layout_width="wrap_content"-->
+                                    <!--                                                        android:layout_height="wrap_content"-->
+                                    <!--                                                        android:layout_gravity="center"-->
+                                    <!--                                                        android:gravity="center"-->
+                                    <!--                                                        android:text="Rate (%)"-->
+                                    <!--                                                        android:textColor="@color/white"-->
+                                    <!--                                                        android:textSize="14sp"-->
+                                    <!--                                                        android:textStyle="bold" />-->
+
+                                    <!--                                                    &lt;!&ndash;                                        <View&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                            android:layout_width="match_parent"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                            android:layout_height="1.5dp"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                            android:layout_marginLeft="20dp"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                            android:layout_marginTop="2dp"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                            android:background="#fdcccbca" />&ndash;&gt;-->
+
+                                    <!--                                                </LinearLayout>-->
+
+
+                                    <!--                                                <LinearLayout-->
+                                    <!--                                                    android:layout_width="0dp"-->
+                                    <!--                                                    android:layout_height="match_parent"-->
+                                    <!--                                                    android:layout_gravity="center"-->
+                                    <!--                                                    android:layout_weight="1.5"-->
+                                    <!--                                                    android:gravity="center"-->
+                                    <!--                                                    android:orientation="vertical">-->
+
+                                    <!--                                                    <TextView-->
+                                    <!--                                                        android:layout_width="wrap_content"-->
+                                    <!--                                                        android:layout_height="wrap_content"-->
+                                    <!--                                                        android:layout_gravity="center|right"-->
+                                    <!--                                                        android:layout_marginRight="10dp"-->
+                                    <!--                                                        android:gravity="center|right"-->
+                                    <!--                                                        android:text="Total Incentives"-->
+                                    <!--                                                        android:textColor="@color/white"-->
+                                    <!--                                                        android:textSize="14sp"-->
+                                    <!--                                                        android:textStyle="bold" />-->
+
+                                    <!--                                                    &lt;!&ndash;                                    <View&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                        android:layout_width="match_parent"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                        android:layout_height="1.5dp"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                        android:layout_marginLeft="5dp"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                        android:layout_marginTop="2dp"&ndash;&gt;-->
+                                    <!--                                                    &lt;!&ndash;                                        android:background="#fdcccbca" />&ndash;&gt;-->
+
+                                    <!--                                                </LinearLayout>-->
+
+
+                                    <!--                                            </LinearLayout>-->
+
+
+                                    <!--                                            <LinearLayout-->
+                                    <!--                                                android:id="@+id/recycleView"-->
+                                    <!--                                                android:layout_width="match_parent"-->
+                                    <!--                                                android:layout_height="wrap_content"-->
+                                    <!--                                                android:layout_below="@+id/relative003"-->
+                                    <!--                                                android:layout_margin="10dp"-->
+                                    <!--                                                android:orientation="horizontal">-->
+
+
+                                    <!--                                                <androidx.recyclerview.widget.RecyclerView-->
+                                    <!--                                                    android:id="@+id/rv_level_details"-->
+                                    <!--                                                    android:layout_width="match_parent"-->
+                                    <!--                                                    android:layout_height="wrap_content"-->
+                                    <!--                                                    android:layout_margin="0dp"></androidx.recyclerview.widget.RecyclerView>-->
+
+
+                                    <!--                                            </LinearLayout>-->
+
+                                    <!--                                            <LinearLayout-->
+                                    <!--                                                android:layout_width="match_parent"-->
+                                    <!--                                                android:layout_height="30dp"-->
+                                    <!--                                                android:layout_below="@+id/recycleView"-->
+                                    <!--                                                android:layout_gravity="center"-->
+                                    <!--                                                android:background="@color/blue_lighter_color"-->
+                                    <!--                                                android:gravity="center"-->
+                                    <!--                                                android:orientation="horizontal">-->
+
+                                    <!--                                                <LinearLayout-->
+                                    <!--                                                    android:layout_width="0dp"-->
+                                    <!--                                                    android:layout_height="wrap_content"-->
+                                    <!--                                                    android:layout_gravity="center"-->
+                                    <!--                                                    android:layout_weight=".4"-->
+                                    <!--                                                    android:background="@color/light_gray"-->
+                                    <!--                                                    android:gravity="center"-->
+                                    <!--                                                    android:orientation="horizontal">-->
+
+
+                                    <!--                                                </LinearLayout>-->
+
+                                    <!--                                                <LinearLayout-->
+                                    <!--                                                    android:layout_width="0dp"-->
+                                    <!--                                                    android:layout_height="wrap_content"-->
+                                    <!--                                                    android:layout_gravity="center"-->
+                                    <!--                                                    android:layout_weight=".6"-->
+                                    <!--                                                    android:gravity="center"-->
+                                    <!--                                                    android:orientation="horizontal">-->
+
+                                    <!--                                                    <TextView-->
+                                    <!--                                                        android:id="@+id/totalAmount"-->
+                                    <!--                                                        android:layout_width="0dp"-->
+                                    <!--                                                        android:layout_height="wrap_content"-->
+                                    <!--                                                        android:layout_gravity="center"-->
+                                    <!--                                                        android:layout_weight=".24"-->
+                                    <!--                                                        android:gravity="center"-->
+                                    <!--                                                        android:text="Total Amount"-->
+                                    <!--                                                        android:textColor="@color/colorBlack"-->
+                                    <!--                                                        android:textSize="14sp"-->
+                                    <!--                                                        android:textStyle="bold" />-->
+
+                                    <!--                                                    <TextView-->
+                                    <!--                                                        android:id="@+id/totalAmountValue"-->
+                                    <!--                                                        android:layout_width="0dp"-->
+                                    <!--                                                        android:layout_height="wrap_content"-->
+                                    <!--                                                        android:layout_gravity="center"-->
+                                    <!--                                                        android:layout_weight=".24"-->
+                                    <!--                                                        android:gravity="center"-->
+                                    <!--                                                        android:text="..."-->
+                                    <!--                                                        android:textColor="@color/colorBlack"-->
+                                    <!--                                                        android:textSize="14sp"-->
+                                    <!--                                                        android:textStyle="bold" />-->
+                                    <!--                                                </LinearLayout>-->
+
+                                    <!--                                            </LinearLayout>-->
+                                    <!--                                        </RelativeLayout>-->
+
+                                    <!--                                    </androidx.cardview.widget.CardView>-->
+
+                                    <!--                                </RelativeLayout>-->
+
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview006"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="15dp"
+                                android:elevation="15dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="0dp"
+                                app:cardMaxElevation="15dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RelativeLayout
+                                        android:id="@+id/relative06"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="7dp"
+                                        android:layout_marginRight="2dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginLeft="5dp"
+                                            app:srcCompat="@drawable/bonusicons144" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="30dp"
+                                            android:text="Business Details"
+                                            android:textColor="@color/myteamcolor"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                    </RelativeLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@+id/relative06"
+                                        android:orientation="horizontal">
+
+                                        <!--                                    <LinearLayout-->
+                                        <!--                                        android:layout_marginTop="3dp"-->
+                                        <!--                                        android:layout_width="match_parent"-->
+                                        <!--                                        android:layout_height="wrap_content"-->
+                                        <!--                                        android:layout_marginBottom="5dp"-->
+                                        <!--                                        android:orientation="horizontal"-->
+                                        <!--                                        android:weightSum="1">-->
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_marginTop="6dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:gravity="center_horizontal"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="1dp"
+                                                android:layout_marginRight="20dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="2">
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="0dp"
+                                                    android:layout_marginTop="1dp"
+                                                    android:layout_marginRight="0dp"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical"
+                                                    android:weightSum="2">
+
+                                                    <TextView
+                                                        android:id="@+id/cPBV"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_gravity="center"
+                                                        android:layout_weight="1"
+                                                        android:gravity="center"
+                                                        android:text="0.00"
+                                                        android:textSize="13sp"
+                                                        android:textStyle="normal" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_gravity="center"
+                                                        android:layout_weight="1"
+                                                        android:gravity="center"
+                                                        android:text="C PBV"
+                                                        android:textSize="13sp"
+                                                        android:textStyle="normal" />
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="0dp"
+                                                    android:layout_marginTop="1dp"
+                                                    android:layout_marginRight="0dp"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical"
+                                                    android:weightSum="2">
+
+                                                    <TextView
+                                                        android:id="@+id/cGBV"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_gravity="center"
+                                                        android:layout_weight="1"
+                                                        android:gravity="center"
+                                                        android:text="0.00"
+                                                        android:textSize="13sp"
+                                                        android:textStyle="normal" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_gravity="center"
+                                                        android:layout_weight="1"
+                                                        android:gravity="center"
+                                                        android:text="C GBV"
+                                                        android:textSize="13sp"
+                                                        android:textStyle="normal" />
+
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:layout_marginRight="20dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="2">
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="0dp"
+                                                    android:layout_marginTop="1dp"
+                                                    android:layout_marginRight="0dp"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical"
+                                                    android:weightSum="2">
+
+                                                    <TextView
+                                                        android:id="@+id/tPBV"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_gravity="center"
+                                                        android:layout_weight="1"
+                                                        android:gravity="center"
+                                                        android:text="0.00"
+                                                        android:textSize="13sp"
+                                                        android:textStyle="normal" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_gravity="center"
+                                                        android:layout_weight="1"
+                                                        android:gravity="center"
+                                                        android:text="T PBV"
+                                                        android:textSize="13sp"
+                                                        android:textStyle="normal" />
+
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="0dp"
+                                                    android:layout_marginTop="1dp"
+                                                    android:layout_marginRight="0dp"
+                                                    android:layout_weight="1"
+                                                    android:orientation="vertical"
+                                                    android:weightSum="2">
+
+                                                    <TextView
+                                                        android:id="@+id/tGBV"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_gravity="center"
+                                                        android:layout_weight="1"
+                                                        android:gravity="center"
+                                                        android:text="0.00"
+                                                        android:textSize="13sp"
+                                                        android:textStyle="normal" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_gravity="center"
+                                                        android:layout_weight="1"
+                                                        android:gravity="center"
+                                                        android:text="T GBV"
+                                                        android:textSize="13sp"
+                                                        android:textStyle="normal" />
+
+                                                </LinearLayout>
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                        <!--                                        <View-->
+                                        <!--                                            android:layout_width="1.5dp"-->
+                                        <!--                                            android:layout_height="60dp"-->
+                                        <!--                                            android:layout_below="@+id/relative01"-->
+                                        <!--                                            android:layout_gravity="center_vertical"-->
+                                        <!--                                            android:background="#fdcccbca" />-->
+
+                                        <!--                                        <LinearLayout-->
+                                        <!--                                            android:orientation="vertical"-->
+                                        <!--                                            android:layout_gravity="center_horizontal"-->
+                                        <!--                                            android:gravity="center_horizontal"-->
+                                        <!--                                            android:layout_weight="1"-->
+                                        <!--                                            android:layout_width="0dp"-->
+                                        <!--                                            android:layout_height="wrap_content">-->
+
+                                        <!--                                            <LinearLayout-->
+                                        <!--                                                android:orientation="horizontal"-->
+                                        <!--                                                android:layout_marginTop="1dp"-->
+                                        <!--                                                android:layout_width="match_parent"-->
+                                        <!--                                                android:layout_height="wrap_content">-->
+
+                                        <!--                                                <TextView-->
+                                        <!--                                                    android:layout_width="wrap_content"-->
+                                        <!--                                                    android:layout_height="wrap_content"-->
+                                        <!--                                                    android:layout_marginLeft="15dp"-->
+                                        <!--                                                    android:textSize="12sp"-->
+                                        <!--                                                    android:textStyle="normal"-->
+                                        <!--                                                    android:text="MRB" />-->
+
+                                        <!--                                                <TextView-->
+                                        <!--                                                    android:id="@+id/bonusselfrepurchasemakng"-->
+                                        <!--                                                    android:layout_width="wrap_content"-->
+                                        <!--                                                    android:layout_height="wrap_content"-->
+                                        <!--                                                    android:layout_marginLeft="55dp"-->
+                                        <!--                                                    android:text="0"-->
+                                        <!--                                                    android:textSize="12sp"-->
+                                        <!--                                                    android:textStyle="normal" />-->
+
+                                        <!--                                            </LinearLayout>-->
+
+                                        <!--                                            <LinearLayout-->
+                                        <!--                                                android:orientation="horizontal"-->
+                                        <!--                                                android:layout_marginTop="1dp"-->
+                                        <!--                                                android:layout_width="match_parent"-->
+                                        <!--                                                android:layout_height="wrap_content">-->
+
+                                        <!--                                                <TextView-->
+                                        <!--                                                    android:layout_width="wrap_content"-->
+                                        <!--                                                    android:layout_height="wrap_content"-->
+                                        <!--                                                    android:layout_marginLeft="15dp"-->
+                                        <!--                                                    android:textSize="12sp"-->
+                                        <!--                                                    android:textStyle="normal"-->
+                                        <!--                                                    android:text="SRB" />-->
+
+                                        <!--                                                <TextView-->
+                                        <!--                                                    android:id="@+id/bonussponsr"-->
+                                        <!--                                                    android:layout_width="wrap_content"-->
+                                        <!--                                                    android:layout_height="wrap_content"-->
+                                        <!--                                                    android:textSize="12sp"-->
+                                        <!--                                                    android:textStyle="normal"-->
+                                        <!--                                                    android:layout_marginLeft="59dp"-->
+                                        <!--                                                    android:text="0" />-->
+
+                                        <!--                                            </LinearLayout>-->
+
+                                        <!--                                        </LinearLayout>-->
+
+                                        <!--                                    </LinearLayout>-->
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview004"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="15dp"
+                                android:elevation="15dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="0dp"
+                                app:cardMaxElevation="15dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RelativeLayout
+                                        android:id="@+id/relative01"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="7dp"
+                                        android:layout_marginRight="2dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginLeft="5dp"
+                                            app:srcCompat="@drawable/bonusicons144" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="30dp"
+                                            android:text="Bonus"
+                                            android:textColor="@color/myteamcolor"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                    </RelativeLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@+id/relative01"
+                                        android:orientation="horizontal">
+
+                                        <!--                                    <LinearLayout-->
+                                        <!--                                        android:layout_marginTop="3dp"-->
+                                        <!--                                        android:layout_width="match_parent"-->
+                                        <!--                                        android:layout_height="wrap_content"-->
+                                        <!--                                        android:layout_marginBottom="5dp"-->
+                                        <!--                                        android:orientation="horizontal"-->
+                                        <!--                                        android:weightSum="1">-->
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:layout_marginTop="6dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:gravity="center_horizontal"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="1dp"
+                                                android:layout_marginRight="20dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="2">
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|left"
+                                                    android:layout_weight="1.3"
+                                                    android:gravity="center|left"
+                                                    android:text="Recruitment Bonus"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                                <TextView
+                                                    android:id="@+id/bonusrecruitment"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|right"
+                                                    android:layout_weight=".7"
+                                                    android:gravity="center|right"
+                                                    android:text="0"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="1dp"
+                                                android:weightSum="2"
+                                                android:layout_marginRight="20dp"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|left"
+                                                    android:layout_weight="1.3"
+                                                    android:gravity="center|left"
+                                                    android:text="Performance Bonus"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                                <TextView
+                                                    android:id="@+id/bonusperformance"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|right"
+                                                    android:layout_marginLeft="0dp"
+                                                    android:layout_weight=".7"
+                                                    android:gravity="center|right"
+                                                    android:text="0"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:weightSum="2"
+                                                android:layout_marginTop="1dp"
+                                                android:layout_marginRight="20dp"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|left"
+                                                    android:layout_weight="1.3"
+                                                    android:gravity="center|left"
+                                                    android:text="Silver Club Bonus"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                                <TextView
+                                                    android:id="@+id/bonussilverclub"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|right"
+                                                    android:layout_weight=".7"
+                                                    android:gravity="center|right"
+                                                    android:text="0"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="1dp"
+                                                android:layout_marginRight="20dp"
+                                                android:weightSum="2"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|left"
+                                                    android:layout_weight="1.3"
+                                                    android:gravity="center|left"
+                                                    android:text="Gold Club Bonus"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                                <TextView
+                                                    android:id="@+id/bonusgoldclub"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|right"
+                                                    android:layout_weight=".7"
+                                                    android:gravity="center|right"
+                                                    android:text="0"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="1dp"
+                                                android:layout_marginRight="20dp"
+                                                android:weightSum="2"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|left"
+                                                    android:layout_weight="1.3"
+                                                    android:gravity="center|left"
+                                                    android:text="Platinum Club Bonus"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                                <TextView
+                                                    android:id="@+id/bonusplatinumclub"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|right"
+                                                    android:layout_weight=".7"
+                                                    android:gravity="center|right"
+                                                    android:text="0"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="1dp"
+                                                android:layout_marginRight="20dp"
+                                                android:weightSum="2"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|left"
+                                                    android:layout_weight="1.3"
+                                                    android:gravity="center|left"
+                                                    android:text="Diamond Club Bonus"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                                <TextView
+                                                    android:id="@+id/bonusdiamondclub"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|right"
+                                                    android:layout_weight=".7"
+                                                    android:gravity="center|right"
+                                                    android:text="0"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="1dp"
+                                                android:layout_marginRight="20dp"
+                                                android:weightSum="2"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|left"
+                                                    android:layout_weight="1.3"
+                                                    android:gravity="center|left"
+                                                    android:text="Diamond Overriding Bonus"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                                <TextView
+                                                    android:id="@+id/bonusoverriding"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|right"
+                                                    android:layout_weight=".7"
+                                                    android:gravity="center|right"
+                                                    android:text="0"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="1dp"
+                                                android:layout_marginRight="20dp"
+                                                android:weightSum="2"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|left"
+                                                    android:layout_weight="1.3"
+                                                    android:gravity="center|left"
+                                                    android:text=""
+                                                    android:textSize="5sp"
+                                                    android:textStyle="normal" />
+
+                                                <TextView
+                                                    android:id="@+id/gap"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|right"
+                                                    android:layout_weight=".7"
+                                                    android:gravity="center|right"
+                                                    android:text=""
+                                                    android:textSize="5sp"
+                                                    android:textStyle="normal" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="1dp"
+                                                android:layout_marginRight="20dp"
+                                                android:weightSum="2"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|left"
+                                                    android:layout_weight="1.3"
+                                                    android:gravity="center|left"
+                                                    android:text="Car Fund"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                                <TextView
+                                                    android:id="@+id/carFund"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|right"
+                                                    android:layout_weight=".7"
+                                                    android:gravity="center|right"
+                                                    android:text="0"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="1dp"
+                                                android:layout_marginRight="20dp"
+                                                android:weightSum="2"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|left"
+                                                    android:layout_weight="1.3"
+                                                    android:gravity="center|left"
+                                                    android:text="House Fund"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                                <TextView
+                                                    android:id="@+id/houseFund"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center|right"
+                                                    android:layout_weight=".7"
+                                                    android:gravity="center|right"
+                                                    android:text="0"
+                                                    android:textSize="13sp"
+                                                    android:textStyle="normal" />
+
+                                            </LinearLayout>
+
+                                            <!--                                            <LinearLayout-->
+                                            <!--                                                android:orientation="horizontal"-->
+                                            <!--                                                android:layout_marginLeft="10dp"-->
+                                            <!--                                                android:layout_marginTop="1dp"-->
+                                            <!--                                                android:layout_width="match_parent"-->
+                                            <!--                                                android:layout_height="wrap_content">-->
+
+                                            <!--                                                <TextView-->
+                                            <!--                                                    android:layout_width="wrap_content"-->
+                                            <!--                                                    android:layout_height="wrap_content"-->
+                                            <!--                                                    android:textSize="12sp"-->
+                                            <!--                                                    android:textStyle="normal"-->
+                                            <!--                                                    android:text="SRB" />-->
+
+                                            <!--                                                <TextView-->
+                                            <!--                                                    android:id="@+id/bonusselfrepurchase"-->
+                                            <!--                                                    android:layout_width="wrap_content"-->
+                                            <!--                                                    android:layout_height="wrap_content"-->
+                                            <!--                                                    android:layout_marginLeft="60dp"-->
+                                            <!--                                                    android:text="0"-->
+                                            <!--                                                    android:textSize="13sp"-->
+                                            <!--                                                    android:textStyle="normal" />-->
+
+                                            <!--                                            </LinearLayout>-->
+
+                                        </LinearLayout>
+
+                                        <!--                                        <View-->
+                                        <!--                                            android:layout_width="1.5dp"-->
+                                        <!--                                            android:layout_height="60dp"-->
+                                        <!--                                            android:layout_below="@+id/relative01"-->
+                                        <!--                                            android:layout_gravity="center_vertical"-->
+                                        <!--                                            android:background="#fdcccbca" />-->
+
+                                        <!--                                        <LinearLayout-->
+                                        <!--                                            android:orientation="vertical"-->
+                                        <!--                                            android:layout_gravity="center_horizontal"-->
+                                        <!--                                            android:gravity="center_horizontal"-->
+                                        <!--                                            android:layout_weight="1"-->
+                                        <!--                                            android:layout_width="0dp"-->
+                                        <!--                                            android:layout_height="wrap_content">-->
+
+                                        <!--                                            <LinearLayout-->
+                                        <!--                                                android:orientation="horizontal"-->
+                                        <!--                                                android:layout_marginTop="1dp"-->
+                                        <!--                                                android:layout_width="match_parent"-->
+                                        <!--                                                android:layout_height="wrap_content">-->
+
+                                        <!--                                                <TextView-->
+                                        <!--                                                    android:layout_width="wrap_content"-->
+                                        <!--                                                    android:layout_height="wrap_content"-->
+                                        <!--                                                    android:layout_marginLeft="15dp"-->
+                                        <!--                                                    android:textSize="12sp"-->
+                                        <!--                                                    android:textStyle="normal"-->
+                                        <!--                                                    android:text="MRB" />-->
+
+                                        <!--                                                <TextView-->
+                                        <!--                                                    android:id="@+id/bonusselfrepurchasemakng"-->
+                                        <!--                                                    android:layout_width="wrap_content"-->
+                                        <!--                                                    android:layout_height="wrap_content"-->
+                                        <!--                                                    android:layout_marginLeft="55dp"-->
+                                        <!--                                                    android:text="0"-->
+                                        <!--                                                    android:textSize="12sp"-->
+                                        <!--                                                    android:textStyle="normal" />-->
+
+                                        <!--                                            </LinearLayout>-->
+
+                                        <!--                                            <LinearLayout-->
+                                        <!--                                                android:orientation="horizontal"-->
+                                        <!--                                                android:layout_marginTop="1dp"-->
+                                        <!--                                                android:layout_width="match_parent"-->
+                                        <!--                                                android:layout_height="wrap_content">-->
+
+                                        <!--                                                <TextView-->
+                                        <!--                                                    android:layout_width="wrap_content"-->
+                                        <!--                                                    android:layout_height="wrap_content"-->
+                                        <!--                                                    android:layout_marginLeft="15dp"-->
+                                        <!--                                                    android:textSize="12sp"-->
+                                        <!--                                                    android:textStyle="normal"-->
+                                        <!--                                                    android:text="SRB" />-->
+
+                                        <!--                                                <TextView-->
+                                        <!--                                                    android:id="@+id/bonussponsr"-->
+                                        <!--                                                    android:layout_width="wrap_content"-->
+                                        <!--                                                    android:layout_height="wrap_content"-->
+                                        <!--                                                    android:textSize="12sp"-->
+                                        <!--                                                    android:textStyle="normal"-->
+                                        <!--                                                    android:layout_marginLeft="59dp"-->
+                                        <!--                                                    android:text="0" />-->
+
+                                        <!--                                            </LinearLayout>-->
+
+                                        <!--                                        </LinearLayout>-->
+
+                                        <!--                                    </LinearLayout>-->
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <!--                        <androidx.cardview.widget.CardView-->
+                            <!--                            android:id="@+id/cardview004"-->
+                            <!--                            android:layout_width="match_parent"-->
+                            <!--                            android:layout_height="100dp"-->
+                            <!--                            android:layout_marginLeft="15dp"-->
+                            <!--                            android:layout_marginRight="15dp"-->
+                            <!--                            android:layout_marginTop="10dp"-->
+                            <!--                            android:elevation="15dp"-->
+                            <!--                            app:cardCornerRadius="0dp"-->
+                            <!--                            android:visibility="visible"-->
+                            <!--                            app:cardMaxElevation="15dp">-->
+
+                            <!--                            <RelativeLayout-->
+                            <!--                                android:layout_width="match_parent"-->
+                            <!--                                android:layout_height="match_parent">-->
+                            <!--                                <RelativeLayout-->
+                            <!--                                    android:id="@+id/relative01"-->
+                            <!--                                    android:layout_marginTop="7dp"-->
+                            <!--                                    android:layout_marginLeft="10dp"-->
+                            <!--                                    android:layout_marginRight="2dp"-->
+                            <!--                                    android:layout_width="wrap_content"-->
+                            <!--                                    android:layout_height="wrap_content">-->
+
+                            <!--                                    <ImageView-->
+                            <!--                                        app:srcCompat="@drawable/bonusicons144"-->
+                            <!--                                        android:layout_marginLeft="5dp"-->
+                            <!--                                        android:layout_width="20dp"-->
+                            <!--                                        android:layout_height="20dp"/>-->
+
+                            <!--                                    <TextView-->
+                            <!--                                        android:layout_width="wrap_content"-->
+                            <!--                                        android:layout_height="wrap_content"-->
+                            <!--                                        android:textSize="14sp"-->
+                            <!--                                        android:layout_marginLeft="30dp"-->
+                            <!--                                        android:layout_centerVertical="true"-->
+                            <!--                                        android:textColor="@color/myteamcolor"-->
+                            <!--                                        android:textStyle="bold"-->
+                            <!--                                        android:text="Bonus" />-->
+
+                            <!--                                </RelativeLayout>-->
+
+                            <!--                                <LinearLayout-->
+                            <!--                                    android:layout_below="@+id/relative01"-->
+                            <!--                                    android:orientation="horizontal"-->
+                            <!--                                    android:layout_width="match_parent"-->
+                            <!--                                    android:layout_height="match_parent">-->
+
+                            <!--                                    <LinearLayout-->
+                            <!--                                        android:layout_marginTop="3dp"-->
+                            <!--                                        android:layout_width="match_parent"-->
+                            <!--                                        android:layout_height="wrap_content"-->
+                            <!--                                        android:orientation="horizontal"-->
+                            <!--                                        android:weightSum="2">-->
+
+                            <!--                                        <LinearLayout-->
+                            <!--                                            android:orientation="vertical"-->
+                            <!--                                            android:layout_gravity="center_horizontal"-->
+                            <!--                                            android:gravity="center_horizontal"-->
+                            <!--                                            android:layout_weight="1"-->
+                            <!--                                            android:layout_width="0dp"-->
+                            <!--                                            android:layout_height="wrap_content">-->
+
+                            <!--                                            <LinearLayout-->
+                            <!--                                                android:orientation="horizontal"-->
+                            <!--                                                android:layout_marginLeft="10dp"-->
+                            <!--                                                android:layout_marginTop="1dp"-->
+                            <!--                                                android:layout_width="match_parent"-->
+                            <!--                                                android:layout_height="wrap_content">-->
+
+                            <!--                                                <TextView-->
+                            <!--                                                    android:layout_width="wrap_content"-->
+                            <!--                                                    android:layout_height="wrap_content"-->
+                            <!--                                                    android:textSize="12sp"-->
+                            <!--                                                    android:textStyle="normal"-->
+                            <!--                                                    android:text="SB" />-->
+
+                            <!--                                                <TextView-->
+                            <!--                                                    android:id="@+id/bonusdirect"-->
+                            <!--                                                    android:layout_width="wrap_content"-->
+                            <!--                                                    android:layout_height="wrap_content"-->
+                            <!--                                                    android:layout_marginLeft="68dp"-->
+                            <!--                                                    android:text="0"-->
+                            <!--                                                    android:textSize="12sp"-->
+                            <!--                                                    android:textStyle="normal" />-->
+
+                            <!--                                            </LinearLayout>-->
+
+                            <!--                                            <LinearLayout-->
+                            <!--                                                android:orientation="horizontal"-->
+                            <!--                                                android:layout_marginLeft="10dp"-->
+                            <!--                                                android:layout_marginTop="1dp"-->
+                            <!--                                                android:layout_width="match_parent"-->
+                            <!--                                                android:layout_height="wrap_content">-->
+
+                            <!--                                                <TextView-->
+                            <!--                                                    android:layout_width="wrap_content"-->
+                            <!--                                                    android:layout_height="wrap_content"-->
+                            <!--                                                    android:textSize="12sp"-->
+                            <!--                                                    android:textStyle="normal"-->
+                            <!--                                                    android:text="MB" />-->
+
+                            <!--                                                <TextView-->
+                            <!--                                                    android:id="@+id/bonusmatching"-->
+                            <!--                                                    android:layout_width="wrap_content"-->
+                            <!--                                                    android:layout_height="wrap_content"-->
+                            <!--                                                    android:textSize="12sp"-->
+                            <!--                                                    android:textStyle="normal"-->
+                            <!--                                                    android:layout_marginLeft="64dp"-->
+                            <!--                                                    android:text="0" />-->
+
+                            <!--                                            </LinearLayout>-->
+
+                            <!--                                            <LinearLayout-->
+                            <!--                                                android:orientation="horizontal"-->
+                            <!--                                                android:layout_marginLeft="10dp"-->
+                            <!--                                                android:layout_marginTop="1dp"-->
+                            <!--                                                android:layout_width="match_parent"-->
+                            <!--                                                android:layout_height="wrap_content">-->
+
+                            <!--                                                <TextView-->
+                            <!--                                                    android:layout_width="wrap_content"-->
+                            <!--                                                    android:layout_height="wrap_content"-->
+                            <!--                                                    android:textSize="12sp"-->
+                            <!--                                                    android:textStyle="normal"-->
+                            <!--                                                    android:text="SRB" />-->
+
+                            <!--                                                <TextView-->
+                            <!--                                                    android:id="@+id/bonusselfrepurchase"-->
+                            <!--                                                    android:layout_width="wrap_content"-->
+                            <!--                                                    android:layout_height="wrap_content"-->
+                            <!--                                                    android:layout_marginLeft="60dp"-->
+                            <!--                                                    android:text="0"-->
+                            <!--                                                    android:textSize="13sp"-->
+                            <!--                                                    android:textStyle="normal" />-->
+
+                            <!--                                            </LinearLayout>-->
+
+                            <!--                                        </LinearLayout>-->
+
+                            <!--                                        <View-->
+                            <!--                                            android:layout_width="1.5dp"-->
+                            <!--                                            android:layout_height="60dp"-->
+                            <!--                                            android:layout_below="@+id/relative01"-->
+                            <!--                                            android:layout_gravity="center_vertical"-->
+                            <!--                                            android:background="#fdcccbca" />-->
+
+                            <!--                                        <LinearLayout-->
+                            <!--                                            android:orientation="vertical"-->
+                            <!--                                            android:layout_gravity="center_horizontal"-->
+                            <!--                                            android:gravity="center_horizontal"-->
+                            <!--                                            android:layout_weight="1"-->
+                            <!--                                            android:layout_width="0dp"-->
+                            <!--                                            android:layout_height="wrap_content">-->
+
+                            <!--                                            <LinearLayout-->
+                            <!--                                                android:orientation="horizontal"-->
+                            <!--                                                android:layout_marginTop="1dp"-->
+                            <!--                                                android:layout_width="match_parent"-->
+                            <!--                                                android:layout_height="wrap_content">-->
+
+                            <!--                                                <TextView-->
+                            <!--                                                    android:layout_width="wrap_content"-->
+                            <!--                                                    android:layout_height="wrap_content"-->
+                            <!--                                                    android:layout_marginLeft="15dp"-->
+                            <!--                                                    android:textSize="12sp"-->
+                            <!--                                                    android:textStyle="normal"-->
+                            <!--                                                    android:text="MRB" />-->
+
+                            <!--                                                <TextView-->
+                            <!--                                                    android:id="@+id/bonusselfrepurchasemakng"-->
+                            <!--                                                    android:layout_width="wrap_content"-->
+                            <!--                                                    android:layout_height="wrap_content"-->
+                            <!--                                                    android:layout_marginLeft="55dp"-->
+                            <!--                                                    android:text="0"-->
+                            <!--                                                    android:textSize="12sp"-->
+                            <!--                                                    android:textStyle="normal" />-->
+
+                            <!--                                            </LinearLayout>-->
+
+                            <!--                                            <LinearLayout-->
+                            <!--                                                android:orientation="horizontal"-->
+                            <!--                                                android:layout_marginTop="1dp"-->
+                            <!--                                                android:layout_width="match_parent"-->
+                            <!--                                                android:layout_height="wrap_content">-->
+
+                            <!--                                                <TextView-->
+                            <!--                                                    android:layout_width="wrap_content"-->
+                            <!--                                                    android:layout_height="wrap_content"-->
+                            <!--                                                    android:layout_marginLeft="15dp"-->
+                            <!--                                                    android:textSize="12sp"-->
+                            <!--                                                    android:textStyle="normal"-->
+                            <!--                                                    android:text="SRB" />-->
+
+                            <!--                                                <TextView-->
+                            <!--                                                    android:id="@+id/bonussponsr"-->
+                            <!--                                                    android:layout_width="wrap_content"-->
+                            <!--                                                    android:layout_height="wrap_content"-->
+                            <!--                                                    android:textSize="12sp"-->
+                            <!--                                                    android:textStyle="normal"-->
+                            <!--                                                    android:layout_marginLeft="59dp"-->
+                            <!--                                                    android:text="0" />-->
+
+                            <!--                                            </LinearLayout>-->
+
+                            <!--                                        </LinearLayout>-->
+
+                            <!--                                    </LinearLayout>-->
+
+                            <!--                                </LinearLayout>-->
+
+                            <!--                            </RelativeLayout>-->
+
+                            <!--                        </androidx.cardview.widget.CardView>-->
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview005"
+                                android:layout_width="match_parent"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="15dp"
+                                android:elevation="15dp"
+                                app:cardCornerRadius="0dp"
+                                app:cardMaxElevation="15dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RelativeLayout
+                                        android:id="@+id/relativelayout02"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginRight="2dp">
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginLeft="5dp"
+                                            app:srcCompat="@drawable/statementiconkyc" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="30dp"
+                                            android:layout_marginTop="0dp"
+                                            android:text="KYC Status"
+                                            android:textColor="@color/myteamcolor"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="200dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@+id/relativelayout02"
+                                        android:layout_marginTop="0dp"
+                                        android:layout_marginBottom="5dp">
+
+                                        <LinearLayout
+                                            android:id="@+id/line1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="5dp"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:id="@+id/panimagetru"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:layout_marginLeft="5dp"
+                                                android:visibility="gone"
+                                                app:srcCompat="@drawable/doneicon" />
+
+                                            <ImageView
+                                                android:id="@+id/panimagefalse"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:layout_marginLeft="5dp"
+                                                app:srcCompat="@drawable/pendingicon" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="5dp"
+                                                android:text="Pan Card"
+                                                android:textSize="14sp"
+                                                android:textStyle="normal" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/line2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/line1"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="3dp"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:id="@+id/bankimagefalse"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:layout_marginLeft="5dp"
+                                                app:srcCompat="@drawable/pendingicon" />
+
+                                            <ImageView
+                                                android:id="@+id/bankimagetru"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:layout_marginLeft="5dp"
+                                                android:visibility="gone"
+                                                app:srcCompat="@drawable/doneicon" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="5dp"
+                                                android:text="Bank Details"
+                                                android:textSize="14sp"
+                                                android:textStyle="normal" />
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/line3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/line2"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="3dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:orientation="horizontal">
+
+                                            <ImageView
+                                                android:id="@+id/addresimagetru"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:layout_marginLeft="5dp"
+                                                android:visibility="gone"
+                                                app:srcCompat="@drawable/doneicon" />
+
+                                            <ImageView
+                                                android:id="@+id/addresimagefalse"
+                                                android:layout_width="15dp"
+                                                android:layout_height="15dp"
+                                                android:layout_marginLeft="5dp"
+                                                app:srcCompat="@drawable/pendingicon" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="5dp"
+                                                android:text="Address Proof"
+                                                android:textSize="14sp"
+                                                android:textStyle="normal" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/kycpersentagetext0"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="20dp"
+                                        android:background="@drawable/persentageimage1">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:layout_marginLeft="5dp"
+                                            android:text="0%"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/kycpersentagetext1"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="20dp"
+                                        android:background="@drawable/persentageimage2"
+                                        android:visibility="gone">
+
+                                        <TextView
+                                            android:id="@+id/kycpersentagetext"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:layout_marginLeft="5dp"
+                                            android:text="35 %"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/kycpersentagetext2"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="20dp"
+                                        android:background="@drawable/persentageimage3"
+                                        android:visibility="gone">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:layout_marginLeft="5dp"
+                                            android:text="70 %"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/kycpersentagetext3"
+                                        android:layout_width="80dp"
+                                        android:layout_height="80dp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="20dp"
+                                        android:background="@drawable/persentageimage4"
+                                        android:visibility="gone">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:layout_marginLeft="5dp"
+                                            android:text="100 %"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2">
+
+            <LinearLayout
+                android:id="@+id/linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/footerbgimage2"
+                android:backgroundTint="@color/blue_color"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linearoutdashfooter1"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/footerdashimage1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/viewprofiless2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Profile"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearoutdashfooter2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/footerdashimage2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/invitefriendshare" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Invite Friends"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearoutdashfooter4"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/footerdashimage4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/teamlistss2" />
+
+                    <!--                    android:text="My Team "-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Level Details"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearoutdashfooter5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/footerdashimage5"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/payoutreporticon2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Payout Report"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--    </ScrollView>-->
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

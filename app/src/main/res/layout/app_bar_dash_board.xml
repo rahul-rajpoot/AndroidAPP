@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    android:background="@color/white"
+    tools:context=".DashBoard">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/dashbackimage"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical"
+                            android:textSize="16sp"
+                            android:text="Dashboard"
+                            />
+
+                        <!--<ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/applogo"/>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--<LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:paddingLeft="10sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:text="aadnyabullion"/>
+
+                </LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:layout_height="wrap_content">
+                        <com.nex3z.notificationbadge.NotificationBadge
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="15dp"
+                            android:id="@+id/notification_badge"
+                            android:layout_toRightOf="@+id/txt_cart_title"
+                            app:nbMaxTextLength="2"
+                            />
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/cartopen"
+                            android:layout_marginTop="7dp"
+                            app:srcCompat="@drawable/dashbordcarticon"/>
+
+                        <TextView
+                            android:id="@+id/txt_cart_title"
+                            android:layout_below="@+id/cartopen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:text=""
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/bellerose"
+                            android:layout_gravity="center_horizontal"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_dash_board" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

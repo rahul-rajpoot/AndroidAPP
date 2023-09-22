@@ -1,0 +1,145 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+//apply plugin: 'com.android.application'
+//apply plugin: 'com.google.gms.google-services'
+
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "com.alps.shisu"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    defaultConfig {
+        resConfigs "en"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+
+        // Returns whether lint should be quiet (for example, not write informational messages such as paths to report files written)
+        quiet true
+
+        // Whether lint should set the exit code of the process if errors are found
+        abortOnError false
+        // Returns whether lint will only check for errors (ignoring warnings)
+        ignoreWarnings true
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.room:room-runtime:2.3.0'
+    implementation 'com.google.android.gms:play-services-cast-framework:20.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+//    /*Todo PayU Money*/
+//    implementation 'com.payumoney.core:payumoney-sdk:7.6.0'
+//    implementation 'com.payumoney.sdkui:plug-n-play:1.6.0'
+//
+//    /*Todo: Progress Dialog*/
+//    implementation 'cc.cloudist.acplibrary:library:1.2.1'
+
+
+    //add library
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+//    implementation 'com.daasuu:CountAnimationTextView:0.1.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.android.volley:volley:1.2.0'
+    implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
+//    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0'
+    implementation 'com.mikhaellopez:circularimageview:3.2.0'
+    implementation 'com.irozon.alertview:alertview:1.0.1'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.7.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'com.crowdfire.cfalertdialog:cfalertdialog:1.1.0'
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+
+
+    //  Rounded Corner Imageview
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'org.sufficientlysecure:html-textview:4.0'
+
+
+//    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    implementation 'com.razorpay:checkout:1.5.12'
+
+    implementation 'com.google.android.play:core:1.10.0'
+    implementation 'org.jsoup:jsoup:1.13.1'
+
+
+    // butter knife
+//    implementation 'com.jakewharton:butterknife:10.0.0'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.nex3z:notification-badge:1.0.2'
+    implementation  'me.biubiubiu.justifytext:library:1.1'
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:28.0.1')
+
+    // Add the dependency for the Firebase SDK for Google Analytics
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
+
+
+    implementation 'me.himanshusoni.quantityview:quantity-view:1.2.0'
+    annotationProcessor 'androidx.room:room-compiler:2.3.0'
+
+
+//    task wrapper(type: Wrapper) {
+//        gradleVersion = '6.7.1'
+//    }
+
+}
+
+//buildscript {
+//    dependencies {
+//        classpath 'com.android.tools.build:gradle:4.2.1'
+//    }
+//}
+//'com.jakewharton:butterknife:8.8.1'

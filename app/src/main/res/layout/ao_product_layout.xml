@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+ android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:padding="0dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/img_product"
+        app:srcCompat="@drawable/loadimage"
+        android:layout_gravity="center_horizontal"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/txt_title_product"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/txt_price_product"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/txt_bv_product"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

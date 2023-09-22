@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    app:cardUseCompatPadding="true"-->
+<!--    app:cardElevation="3dp">-->
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="54dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_gravity="left|center|top"
+    android:gravity="center|left|top"
+    android:background="@drawable/drawer_item_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/eximage"
+        app:srcCompat="@mipmap/profile_icon"
+        android:padding="2dp"
+        android:focusable="false"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/my_selector_color" />
+
+    <TextView
+        android:id="@+id/lblListHeader"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="10dp"
+        android:layout_marginRight="22dp"
+        android:focusable="false"
+        android:fontFamily="@font/poppins_regular"
+        android:textStyle="bold"
+        android:background="@drawable/my_selector_color"
+        android:textSize="15dp" />
+
+</LinearLayout>
+<!--</androidx.cardview.widget.CardView>-->

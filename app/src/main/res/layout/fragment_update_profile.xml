@@ -1,0 +1,1464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatoreditprofile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pagecolor"
+    tools:context=".ProfileManager.EditProfileFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/pencilgreen" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:text="Personal Details:"
+                            android:textColor="@color/colorBlack" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@color/linecolor" />
+
+                        <ImageView
+                            android:id="@+id/closecardep"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_weight="5"
+                            app:srcCompat="@drawable/arrow_down" />
+
+                        <ImageView
+                            android:id="@+id/opencardep"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_weight="5"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/arrow_up" />
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pdcard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <!---titile-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Title"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <!--                                    <TextView-->
+                                    <!--                                        android:id="@+id/titleget"-->
+                                    <!--                                        android:layout_width="match_parent"-->
+                                    <!--                                        android:layout_height="27dp"-->
+                                    <!--                                        android:paddingLeft="5dp"-->
+                                    <!--                                        android:text=""-->
+                                    <!--                                        android:textColor="@color/colorBlack"-->
+                                    <!--                                        android:textSize="15dp"-->
+                                    <!--                                        android:visibility="visible" />-->
+                                    <Spinner
+                                        android:id="@+id/titile"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:visibility="visible"></Spinner>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---fname-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="First Name"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/background_rectangle"
+                                    android:layout_weight="1.2"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/fname"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp"></EditText>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---lname-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Last Name"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/lanme"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp"></EditText>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---s gender-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Select Gender"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/genderset"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="5dp"
+                                        android:text=""
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15dp"
+                                        android:visibility="gone" />
+
+                                    <Spinner
+                                        android:id="@+id/genderspiner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"></Spinner>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---dob-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Date of Birth"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/dobtext"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp"></TextView>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---f h enam-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Father/Husband Name"
+                                        android:textSize="13dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/spousename"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp"></EditText>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---phn-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Mobile No"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal"
+                                        android:background="@drawable/background_rectangle"
+                                        android:weightSum="2">
+
+                                        <EditText
+                                            android:id="@+id/phonecode"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1.5"
+                                            android:background="@null"
+                                            android:gravity="center"
+                                            android:paddingLeft="5dp"
+                                            android:textSize="15sp" />
+
+                                        <View
+
+                                            android:layout_width="1dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="end"
+                                            android:background="@color/linecolor" />
+
+                                        <EditText
+                                            android:id="@+id/phone"
+                                            android:background="@null"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.5"
+                                            android:paddingLeft="5dp"
+                                            android:textColor="@color/colorBlack"
+                                            android:textSize="15sp"></EditText>
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---emailid-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Email Id"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/emailId"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp"></EditText>
+                                </LinearLayout>
+                            </LinearLayout>
+<!--                            &lt;!&ndash;-noimnee name&ndash;&gt;-->
+<!--                            <LinearLayout-->
+<!--                                android:id="@+id/noimneenamell"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="30dp"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:weightSum="2">-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:layout_weight="0.8"-->
+<!--                                    android:orientation="vertical">-->
+
+<!--                                    <TextView-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:layout_gravity="center|left"-->
+<!--                                        android:layout_marginLeft="10dp"-->
+<!--                                        android:gravity="center|left"-->
+<!--                                        android:text="Nominee Name"-->
+<!--                                        android:textSize="14dp"-->
+<!--                                        android:textStyle="bold" />-->
+<!--                                </LinearLayout>-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:background="@drawable/background_rectangle"-->
+<!--                                    android:layout_weight="1.2"-->
+<!--                                    android:orientation="vertical">-->
+
+<!--                                    <EditText-->
+<!--                                        android:id="@+id/nomName"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@null"-->
+<!--                                        android:fontFamily="@font/poppins_regular"-->
+<!--                                        android:paddingLeft="5dp"-->
+<!--                                        android:textColor="@color/colorBlack"-->
+<!--                                        android:textSize="15sp"></EditText>-->
+<!--                                </LinearLayout>-->
+<!--                            </LinearLayout>-->
+<!--                            &lt;!&ndash;-relation&ndash;&gt;-->
+<!--                            <LinearLayout-->
+<!--                                android:id="@+id/retaionll"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="30dp"-->
+<!--                                android:layout_marginBottom="5dp"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:weightSum="2">-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:layout_weight="0.8"-->
+<!--                                    android:orientation="vertical">-->
+
+<!--                                    <TextView-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:layout_gravity="center|left"-->
+<!--                                        android:layout_marginLeft="10dp"-->
+<!--                                        android:gravity="center|left"-->
+<!--                                        android:text="Relation"-->
+<!--                                        android:textSize="14dp"-->
+<!--                                        android:textStyle="bold" />-->
+<!--                                </LinearLayout>-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:background="@drawable/background_rectangle"-->
+<!--                                    android:layout_weight="1.2"-->
+<!--                                    android:orientation="vertical">-->
+
+<!--                                    <EditText-->
+<!--                                        android:id="@+id/relation"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@null"-->
+<!--                                        android:fontFamily="@font/poppins_regular"-->
+<!--                                        android:paddingLeft="5dp"-->
+<!--                                        android:textColor="@color/colorBlack"-->
+<!--                                        android:textSize="15sp"></EditText>-->
+<!--                                </LinearLayout>-->
+<!--                            </LinearLayout>-->
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/note" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:text="Account Details:"
+                            android:textColor="@color/colorBlack" />
+
+                        <View
+
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@color/linecolor" />
+
+                        <ImageView
+                            android:id="@+id/closecardepad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_weight="5"
+                            app:srcCompat="@drawable/arrow_down" />
+
+                        <ImageView
+                            android:id="@+id/opencardepad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_weight="5"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/arrow_up" />
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <!---titile-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Select Country"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/countryget"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingLeft="5dp"
+                                        android:text=""
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+
+                                    <Spinner
+                                        android:id="@+id/Select_Country"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone"></Spinner>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---fname-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Select State"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/stateget"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="5dp"
+                                        android:text=""
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15dp"
+                                        android:visibility="gone" />
+
+                                    <Spinner
+                                        android:id="@+id/Select_State"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"></Spinner>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---lname-->
+<!--                            <LinearLayout-->
+<!--                                android:id="@+id/discll"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="30dp"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:weightSum="2">-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:layout_weight="0.8"-->
+<!--                                    android:orientation="vertical">-->
+
+<!--                                    <TextView-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:layout_gravity="center|left"-->
+<!--                                        android:layout_marginLeft="10dp"-->
+<!--                                        android:gravity="center|left"-->
+<!--                                        android:text="Select District"-->
+<!--                                        android:textSize="14dp"-->
+<!--                                        android:textStyle="bold" />-->
+<!--                                </LinearLayout>-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:layout_weight="1.2"-->
+<!--                                    android:background="@drawable/background_rectangle"-->
+<!--                                    android:orientation="vertical">-->
+
+<!--                                    <TextView-->
+<!--                                        android:id="@+id/disget"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:paddingLeft="5dp"-->
+<!--                                        android:text=""-->
+<!--                                        android:textColor="@color/colorBlack"-->
+<!--                                        android:textSize="15dp"-->
+<!--                                        android:visibility="gone" />-->
+
+<!--                                    <Spinner-->
+<!--                                        android:id="@+id/Select_District"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:visibility="visible"></Spinner>-->
+<!--                                </LinearLayout>-->
+<!--                            </LinearLayout>-->
+                            <!---s gender-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Enter city"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/Cityget"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp"></EditText>
+
+                                </LinearLayout>
+
+
+                                <!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:layout_weight="1.2"-->
+<!--                                    android:background="@drawable/background_rectangle"-->
+<!--                                    android:orientation="vertical">-->
+
+<!--                                    <TextView-->
+<!--                                        android:id="@+id/Cityget"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:paddingLeft="5dp"-->
+<!--                                        android:text=""-->
+<!--                                        android:textColor="@color/colorBlack"-->
+<!--                                        android:textSize="15dp"-->
+<!--                                        android:visibility="gone" />-->
+
+<!--                                    <Spinner-->
+<!--                                        android:id="@+id/Select_City"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:visibility="visible"></Spinner>-->
+<!--                                </LinearLayout>-->
+                            </LinearLayout>
+                            <!---dob-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Address"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/Address"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp"></EditText>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <!---f h enam-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Pin Code"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/pincodeep"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@null"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp"></EditText>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/usergreen" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:text="Login Details:"
+                            android:textColor="@color/colorBlack" />
+
+                        <View
+
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@color/linecolor" />
+
+                        <ImageView
+                            android:id="@+id/closecardepld"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_weight="5"
+                            app:srcCompat="@drawable/arrow_down" />
+
+                        <ImageView
+                            android:id="@+id/opencardepld"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_weight="5"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/arrow_up" />
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardld"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <!---titile-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Username"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/Username"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@null"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---fname-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Password"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <Button
+                                        android:id="@+id/changepassworddialog"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:background="@color/linecolor"
+                                        android:gravity="center"
+                                        android:paddingLeft="20dp"
+                                        android:paddingRight="20dp"
+                                        android:text="Change Password" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---lname-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Security Pin"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/cardnoshow"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:background="@color/linecolor"
+                                        android:gravity="center"
+                                        android:paddingLeft="10dp"
+                                        android:textSize="14dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Change security pin" />
+                                </LinearLayout>
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="0dp"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:layout_weight="1.2"-->
+<!--                                    android:background="@drawable/background_rectangle"-->
+<!--                                    android:orientation="vertical">-->
+
+<!--                                    <EditText-->
+<!--                                        android:id="@+id/cardnoshow"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@null"-->
+<!--                                        android:paddingLeft="5dp"-->
+<!--                                        android:textColor="@color/colorBlack"-->
+<!--                                        android:textSize="15sp"></EditText>-->
+<!--                                </LinearLayout>-->
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/start" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:text="Bank Details:"
+                            android:textColor="@color/colorBlack" />
+
+                        <View
+
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:background="@color/linecolor" />
+
+                        <ImageView
+                            android:id="@+id/closecardepbd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_weight="5"
+                            app:srcCompat="@drawable/arrow_down" />
+
+                        <ImageView
+                            android:id="@+id/opencardepbd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_weight="5"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/arrow_up" />
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardbd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <!---bank name-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Bank Name"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/bankName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---fname-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Bank Address"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/bankadd"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <!---lname-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="IFSC Code"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/ifsccode"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp"></EditText>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="Account Number"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/background_rectangle"
+                                    android:layout_weight="1.2"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/accountNumber"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp"></EditText>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/pannocardll"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.8"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|left"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center|left"
+                                        android:text="PAN No"
+                                        android:textSize="14dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.2"
+                                    android:background="@drawable/background_rectangle"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/panNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:paddingLeft="5dp"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="15sp"></EditText>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/updateBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="15dp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:paddingLeft="40dp"
+                                android:paddingRight="40dp"
+                                android:background="@color/green"
+                                android:text="Update"
+                                android:textColor="@color/colorWhite" />
+
+                            <!--                            <androidx.appcompat.widget.AppCompatButton-->
+                            <!--                                android:id="@+id/cancelBtn"-->
+                            <!--                                android:layout_width="match_parent"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:layout_margin="15dp"-->
+                            <!--                                android:layout_weight="1"-->
+                            <!--                                android:background="@color/lighred"-->
+                            <!--                                android:text="Cancel"-->
+                            <!--                                android:textColor="@color/colorWhite" />-->
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/editprofileprogress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
