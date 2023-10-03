@@ -47,11 +47,7 @@ import java.util.Map;
 import static android.content.ContentValues.TAG;
 import static android.content.Context.MODE_PRIVATE;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MakePaymentFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class MakePaymentFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
 
@@ -400,4 +396,12 @@ public class MakePaymentFragment extends Fragment implements AdapterView.OnItemS
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
+
+
+
+    public void payment(){
+
+    }
+
 }
